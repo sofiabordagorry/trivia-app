@@ -1,0 +1,24 @@
+{
+    "Introducción": [
+      {
+        "type": "multipleChoice",
+        "question": "¿Quién es considerado el padre de los sistemas operativos modernos?",
+        "options": ["Linus Torvalds", "Bill Gates", "Dennis Ritchie", "Steve Jobs"],
+        "answer": "Dennis Ritchie"
+      }
+    ],
+    "Estructura de los Sistemas de Computación": [
+      {
+        "type": "trueOrFalse",
+        "question": "¿Los sistemas operativos de tiempo real son generalmente utilizados para tareas críticas?",
+        "answer": true
+      }
+    ],
+    "Estructura de los Sistemas Operativos":[
+    ],
+    "Procesos": [
+    ],
+    "Planificación": [
+    ]
+  }
+  
