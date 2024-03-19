@@ -1,24 +1,305 @@
 {
-    "Introducción": [
-      {
-        "type": "multipleChoice",
-        "question": "¿Quién es considerado el padre de los sistemas operativos modernos?",
-        "options": ["Linus Torvalds", "Bill Gates", "Dennis Ritchie", "Steve Jobs"],
-        "answer": "Dennis Ritchie"
-      }
-    ],
-    "Estructura de los Sistemas de Computación": [
-      {
-        "type": "trueOrFalse",
-        "question": "¿Los sistemas operativos de tiempo real son generalmente utilizados para tareas críticas?",
-        "answer": true
-      }
-    ],
-    "Estructura de los Sistemas Operativos":[
-    ],
-    "Procesos": [
-    ],
-    "Planificación": [
-    ]
-  }
-  
+  "Introducción": [
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 1",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "b"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 2",
+      "answer": true
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 3",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "c"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 4",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 5",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "d"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 6",
+      "answer": false
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 7",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 8",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "a"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 9",
+      "answer": true
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 10",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 11",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "b"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 12",
+      "answer": false
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 13",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 14",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "c"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 15",
+      "answer": true
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 16",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 17",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "d"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 18",
+      "answer": false
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 19",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 20",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "a"
+    }
+  ],
+  "Estructura de los Sistemas de Computación": [
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 1",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "b"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 2",
+      "answer": true
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 3",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "c"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 4",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 5",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "d"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 6",
+      "answer": false
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 7",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 8",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "a"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 9",
+      "answer": true
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 10",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 11",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "b"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 12",
+      "answer": false
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 13",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 14",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "c"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 15",
+      "answer": true
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 16",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 17",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "d"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Pregunta 18",
+      "answer": false
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Pregunta 19",
+      "answer": "word"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Pregunta 20",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "answer": "a"
+    }
+  ],
+  "Estructura de los Sistemas Operativos": [],
+  "Procesos": [],
+  "Planificación": []
+}
