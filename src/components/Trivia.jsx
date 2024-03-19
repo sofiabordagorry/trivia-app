@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Modal from 'react-modal';
+import ReportError from './ReportError'; // Importa el componente ReportError
 
 function Trivia() {
     const [questions, setQuestions] = useState([]);
@@ -70,6 +71,10 @@ function Trivia() {
     return (
         <div>
             <h1>Trivia de {type}</h1>
+            {/* Barra de progreso */}
+            <div style={{ height: '20px', width: '100%', backgroundColor: '#f3f3f3' }}>
+                <div style={{ height: '100%', width: `${(currentQuestion / questions.length) * 100}%`, backgroundColor: 'cyan' }} />
+            </div>
             {questions.length > 0 ? (
                 currentQuestion < questions.length ? (
                     <div>
@@ -85,8 +90,8 @@ function Trivia() {
                             contentLabel="Reportar error"
                         >
                             <h2>Reportar error</h2>
+                            <ReportError question={questions[currentQuestion].question} closeModal={closeModal} /> {/* Pasa closeModal como una prop */}
                             <button onClick={closeModal}>Cerrar</button>
-                            {/* gregr logic de reporte */}
                         </Modal>
                     </div>
                 ) : (

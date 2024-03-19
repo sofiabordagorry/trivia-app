@@ -1,10 +1,6 @@
 {
-    "topics": [ 
-      "Introducción",
-      "Estructura de los Sistemas de Computación",
-      "Estructuras de los Sistemas Operativos",
-      "Procesos",
-      "Planificación"
-    ]
-  }
-  
+  "topics": [
+    "Introducción",
+    "Estructura de los Sistemas de Computación"
+  ]
+}

@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
-function ReportError({ question }) {
+function ReportError({ question, closeModal }) {
     const [contactInfo, setContactInfo] = useState('');
     const [description, setDescription] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(`Reportando error en la pregunta: ${question}`);
-        console.log(`Información de contacto: ${contactInfo}`);
-        console.log(`Descripción: ${description}`);
+
+        emailjs.send('service_lvo4prx', 'template_zzdi674', {
+            to_name: 'Sofi', // Reemplaza esto con tu nombre
+            from_name: contactInfo,
+            message: `Error en la pregunta: ${question}\nDescripción del error: ${description}`
+        }, 'ZAprI1VngIigjxKyv')
+            .then((result) => {
+                console.log(result.text);
+                closeModal(); // cierra la ventana emergente
+            }, (error) => {
+                console.log(error.text);
+            });
     };
 
     return (
