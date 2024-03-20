@@ -95,8 +95,8 @@ function Trivia() {
             case 'trueOrFalse':
                 return (
                     <div>
-                        <button onClick={() => setUserAnswer(true)}>Verdadero</button>
-                        <button onClick={() => setUserAnswer(false)}>Falso</button>
+                        <button onClick={() => setUserAnswer("true")}>Verdadero</button>
+                        <button onClick={() => setUserAnswer("false")}>Falso</button>
                     </div>
                 );
             default:
