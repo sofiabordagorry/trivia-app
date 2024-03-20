@@ -33,7 +33,7 @@ function ReportError({ question, closeModal }) {
             </label>
             <input type="submit" value="Reportar error" />
         </form>
-    );
+    );    
 }
 
 export default ReportError;

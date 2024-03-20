@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Modal from 'react-modal';
 import ReportError from './ReportError'; // Importa el componente ReportError
@@ -12,24 +13,32 @@ function Trivia() {
     const [userAnswers, setUserAnswers] = useState([]); // Almacena las respuestas del usuario
     const [compareModalIsOpen, setCompareModalIsOpen] = useState(false);
     const [reportModalIsOpen, setReportModalIsOpen] = useState(false);
-    const { type } = useParams(); // Obtenemos el tipo de la URL
+    const { type, count } = useParams(); // Obtenemos el tipo y el count de la URL
+    const questionCount = parseInt(count);
 
     useEffect(() => {
         fetch('/data/questions.json')
             .then(response => response.json())
             .then(data => {
-                setAllQuestions(data[type]);
+                if (type === 'random') {
+                    let allData = [];
+                    for (let key in data) {
+                        allData = allData.concat(data[key]);
+                    }
+                    setAllQuestions(allData);
+                } else {
+                    setAllQuestions(data[type]);
+                }
             });
     }, [type]);
 
     useEffect(() => {
-        // Seleccionar 10 preguntas aleatorias al principio
         if (allQuestions.length > 0) {
             const shuffled = shuffle(allQuestions);
-            const selected = shuffled.slice(0, 10);
+            const selected = shuffled.slice(0, questionCount); // Usamos questionCount en lugar de un número fijo
             setQuestions(selected);
         }
-    }, [allQuestions]);
+    }, [allQuestions, questionCount]); // Agregamos questionCount a las dependencias
 
     const shuffle = array => {
         let currentIndex = array.length, temporaryValue, randomIndex;
@@ -125,12 +134,15 @@ function Trivia() {
                         <h2>¡Has terminado la trivia!</h2>
                         <p>Tu puntuación final es: {score}</p>
                         <button onClick={() => setCurrentQuestion(0)}>Volver a jugar</button>
+                        <button><Link to="/">Volver al inicio</Link></button>
                         <button onClick={openCompareModal}>Comparar mis respuestas</button>
+                        
                         <Modal
                             isOpen={compareModalIsOpen}
                             onRequestClose={closeCompareModal}
                             contentLabel="Comparar respuestas"
                         >
+                            <div className="modal-content">
                             <h2>Comparar respuestas</h2>
                             {questions.map((question, index) => (
                                 <div key={index}>
@@ -144,13 +156,16 @@ function Trivia() {
                                         onRequestClose={closeReportModal}
                                         contentLabel="Reportar error"
                                     >
+                                        <div className="modal-content">
                                         <h2>Reportar error</h2>
                                         <ReportError question={question.question} closeModal={closeReportModal} /> {/* Pasa closeModal como una prop */}
                                         <button onClick={closeReportModal}>Cerrar</button>
+                                        </div>
                                     </Modal>
                                 </div>
                             ))}
                             <button onClick={closeCompareModal}>Cerrar</button>
+                            </div>
                         </Modal>
                     </div>
                 )

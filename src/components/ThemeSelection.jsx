@@ -15,7 +15,7 @@ function ThemeSelection() {
             <h1>Selecciona un tema</h1>
             {themes.map((theme, index) => (
                 <button key={index}>
-                    <Link to={`/trivia/${theme}`}>{theme}</Link>
+                    <Link to={`/trivia/${theme}/10`}>{theme}</Link>
                 </button>
             ))}
         </div>
