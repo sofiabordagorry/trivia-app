@@ -9,12 +9,14 @@
         "c",
         "d"
       ],
-      "answer": "b"
+      "answer": "b",
+      "id": 0
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 2",
-      "answer": true
+      "answer": true,
+      "id": 1
     },
     {
       "type": "multipleChoice",
@@ -25,12 +27,14 @@
         "c",
         "d"
       ],
-      "answer": "c"
+      "answer": "c",
+      "id": 2   
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 4",
-      "answer": "word"
+      "answer": "word",
+      "id": 3
     },
     {
       "type": "multipleChoice",
@@ -41,17 +45,20 @@
         "c",
         "d"
       ],
-      "answer": "d"
+      "answer": "d",
+      "id": 4
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 6",
-      "answer": false
+      "answer": false,
+      "id": 5
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 7",
-      "answer": "word"
+      "answer": "word",
+      "id": 6
     },
     {
       "type": "multipleChoice",
@@ -62,17 +69,20 @@
         "c",
         "d"
       ],
-      "answer": "a"
+      "answer": "a",
+      "id": 7
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 9",
-      "answer": true
+      "answer": true,
+      "id": 8
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 10",
-      "answer": "word"
+      "answer": "word", 
+      "id": 9
     },
     {
       "type": "multipleChoice",
@@ -83,17 +93,20 @@
         "c",
         "d"
       ],
-      "answer": "b"
+      "answer": "b",
+      "id": 10
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 12",
-      "answer": false
+      "answer": false,
+      "id": 11
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 13",
-      "answer": "word"
+      "answer": "word",
+      "id": 12
     },
     {
       "type": "multipleChoice",
@@ -104,17 +117,20 @@
         "c",
         "d"
       ],
-      "answer": "c"
+      "answer": "c",
+      "id": 13
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 15",
-      "answer": true
+      "answer": true,
+      "id": 14
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 16",
-      "answer": "word"
+      "answer": "word",
+      "id": 15
     },
     {
       "type": "multipleChoice",
@@ -125,17 +141,20 @@
         "c",
         "d"
       ],
-      "answer": "d"
+      "answer": "d",
+      "id": 16
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 18",
-      "answer": false
+      "answer": false,
+      "id": 17
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 19",
-      "answer": "word"
+      "answer": "word",
+      "id": 18
     },
     {
       "type": "multipleChoice",
@@ -146,7 +165,8 @@
         "c",
         "d"
       ],
-      "answer": "a"
+      "answer": "a",
+      "id":  19
     }
   ],
   "Estructura de los Sistemas de Computación": [
@@ -159,12 +179,14 @@
         "c",
         "d"
       ],
-      "answer": "b"
+      "answer": "b",
+      "id": 0
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 2",
-      "answer": true
+      "answer": true,
+      "id": 1
     },
     {
       "type": "multipleChoice",
@@ -175,12 +197,14 @@
         "c",
         "d"
       ],
-      "answer": "c"
+      "answer": "c",
+      "id": 2
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 4",
-      "answer": "word"
+      "answer": "word",
+      "id": 3
     },
     {
       "type": "multipleChoice",
@@ -191,17 +215,20 @@
         "c",
         "d"
       ],
-      "answer": "d"
+      "answer": "d",
+      "id": 4
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 6",
-      "answer": false
+      "answer": false,
+      "id": 5
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 7",
-      "answer": "word"
+      "answer": "word",
+      "id": 6
     },
     {
       "type": "multipleChoice",
@@ -212,17 +239,20 @@
         "c",
         "d"
       ],
-      "answer": "a"
+      "answer": "a",
+      "id": 7
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 9",
-      "answer": true
+      "answer": true,
+      "id": 8
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 10",
-      "answer": "word"
+      "answer": "word",
+      "id": 9
     },
     {
       "type": "multipleChoice",
@@ -233,17 +263,20 @@
         "c",
         "d"
       ],
-      "answer": "b"
+      "answer": "b",
+      "id": 10
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 12",
-      "answer": false
+      "answer": false,
+      "id": 11
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 13",
-      "answer": "word"
+      "answer": "word",
+      "id": 12
     },
     {
       "type": "multipleChoice",
@@ -254,17 +287,20 @@
         "c",
         "d"
       ],
-      "answer": "c"
+      "answer": "c",
+      "id": 13
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 15",
-      "answer": true
+      "answer": true,
+      "id": 14
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 16",
-      "answer": "word"
+      "answer": "word",
+      "id": 15
     },
     {
       "type": "multipleChoice",
@@ -275,17 +311,20 @@
         "c",
         "d"
       ],
-      "answer": "d"
+      "answer": "d",
+      "id": 16
     },
     {
       "type": "trueOrFalse",
       "question": "Pregunta 18",
-      "answer": false
+      "answer": false,
+      "id": 17
     },
     {
       "type": "fillInTheBlank",
       "question": "Pregunta 19",
-      "answer": "word"
+      "answer": "word",
+      "id": 18
     },
     {
       "type": "multipleChoice",
@@ -296,7 +335,8 @@
         "c",
         "d"
       ],
-      "answer": "a"
+      "answer": "a",
+      "id": 19
     }
   ],
   "Estructura de los Sistemas Operativos": [],
