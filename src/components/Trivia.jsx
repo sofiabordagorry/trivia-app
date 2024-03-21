@@ -101,7 +101,7 @@ function Trivia() {
             setLoading(true);
             setTimeout(() => {
                 setLoading(false);
-            }, 300); // Cambia este valor al tiempo de carga de tus datos
+            }, 500); // Cambia este valor al tiempo de carga de tus datos
         }
     }, [currentQuestion, questions]);
 
