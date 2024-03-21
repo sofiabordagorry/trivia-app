@@ -3,26 +3,47 @@ body {
     background-color: #008080; /* Un tono de verde */
     color: white; /* Letras blancas */
     text-align: center;
+    background-repeat: repeat; /* Repetir la imagen en todas las direcciones */
 }
 
 h1 {
     color: white;
+    background-color: rgba(256, 256, 256, 0.52);
+    margin-left: 60px;
+    border-radius: 20px;
+    margin-right: 60px;
     text-align: center;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px #000000;
+    font-size: 3em;
+    text-shadow: 5px 2px 4px #000000;
+    -webkit-text-stroke: 0.7px black; /* Borde negro de 1 píxel para navegadores WebKit (Safari, Chrome) */
+    text-stroke: 0.7px black; /* Borde negro de 1 píxel */
 }
 
-p {
-    font-size: 1.5em;
+
+.question-text, .options-text {
+    font-size: 2em;
+    color: black;
+    font-style: italic; /* Establece el texto en cursiva */
 }
+
+.final-score {
+    font-size: 1.5em;
+    color: black;
+}
+
 
 h2 {
-    text-shadow: 2px 2px 4px #000000;
+    color: black;
+    font-size: 2em;
+}
+
+.compare-answer, .report-error, .suggest{
+    color: white;
 }
 
 button {
     background-color: #FFA500; /* Naranja */
-    color: white; /* Letras blancas */
+    color: rgb(39, 38, 38); /* Letras blancas */
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -45,13 +66,13 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 }
 
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid #3498db;
+    border-top: 16px solid rgb(51, 51, 51);
     width: 120px;
     height: 120px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
@@ -70,15 +91,27 @@ button:hover {
 }
 
 .ReactModal__Overlay {
-    background-color: rgba(47, 47, 47, 0.75) !important; /* Gris oscuro transparente */
+    background-color: transparent !important; /* Gris oscuro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #008080; /* Un tono de verde */
+
 }
 
 
 .ReactModal__Content {
     background: #2f2f2f !important; /* Gris oscuro */
     width: 80%;
-    max-width: 500px;
-
+    max-width: 800px;
+    position: relative !important;
+    height: 800px;
+    max-height: 80%;
+    padding: 0 !important;
+    margin: auto !important;
+    justify-content: center;
+    padding: 0;
+    inset: 0 !important;
 }
 
 .modal {
@@ -86,20 +119,24 @@ button:hover {
     justify-content: center;
     align-items: center;
     position: fixed;
+    padding: 0;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 9999;
     background-color: #2f2f2f; /* Gris oscuro */
+    margin: 0 auto; /* Establece los márgenes izquierdo y derecho en automático para centrar el div */
+
 }
 
 .modal-content {
     width: 80%;
-    max-width: 500px;
+    max-width: 900px;
     background-color: #2f2f2f; /* Gris oscuro */    
     padding: 20px;
     border-radius: 4px;
+    margin: 0 auto; /* Establece los márgenes izquierdo y derecho en automático para centrar el div */
 }
 
 form {
@@ -137,4 +174,52 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #FF4500; /* Un tono más oscuro de naranja */
     color: white;
+}
+
+/* styles.css */
+.options-container, .question-container, .results-container {
+    background-color: rgba(256, 256, 256, 0.52);
+    padding: 50px; 
+    border-radius: 5px; 
+    margin: 60px; 
+    height: 80%;
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+}
+
+.barra {
+    height: 20px;
+    width: 70%;
+    background-color: #f3f3f3;
+    border: 2px black solid;
+    padding: 0;
+    margin: 0 auto; /* Establece los márgenes izquierdo y derecho en automático para centrar el div */
+    display: flex; /* Usa flexbox para alinear el contenido */
+}
+
+/* styles.css */
+.modal-content {
+    padding: 20px;
+}
+
+/* styles.css */
+.answer-info {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos de forma equitativa */
+}
+
+.answer-item {
+    flex: 0.25; /* Hace que los elementos dentro de .answer-info tengan un ancho más pequeño */
+}
+
+
+.bi {
+    font-size: 24px; /* Tamaño más grande para el tick/cruz */
+    margin-left: 10px; /* Espacio entre el texto de la pregunta y el tick/cruz */
+}
+
+.fill {
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    font-size: 20px; /* Cambia esto al tamaño de fuente que desees */
 }

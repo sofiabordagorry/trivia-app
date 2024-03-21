@@ -24,7 +24,7 @@ function Welcome() {
         // Simula la carga de datos
         setTimeout(() => {
             setLoading(false);
-        }, 2000); // Cambia este valor al tiempo de carga de tus datos
+        }, 1000); // Cambia este valor al tiempo de carga de tus datos
     }, []);
 
     if (loading) {
@@ -34,12 +34,15 @@ function Welcome() {
     return (
         <div>
             <h1>Bienvenido a la Trivia de Sistemas Operativos</h1>
-            <p>Elige una opción para comenzar:</p>
+            <div className="options-container">
+            <p class="options-text">Elige una opción para comenzar:</p>
             <button onClick={() => handleRandomClick(10)}>Random 10 preguntas</button>
             <button onClick={() => handleRandomClick(30)}>Random 30 preguntas</button>
             <button onClick={() => handleRandomClick(50)}>Random 50 preguntas</button>
-            <button><Link to="/select-theme">Seleccionar Tema</Link></button>
-            <p>O puedes:</p>
+            <Link to="/select-theme">
+            <button>Seleccionar Tema</button>
+            </Link>
+            <p class="options-text">O puedes:</p>
             <button onClick={openSuggestModal}>Sugerir Pregunta</button>
             <Modal
                 isOpen={suggestModalIsOpen}
@@ -47,11 +50,12 @@ function Welcome() {
                 contentLabel="Sugerir Pregunta"
             >
                 <div className="modal-content">
-                <h2>Sugerir Pregunta</h2>
+                <h2 className="suggest">Sugerir Pregunta</h2>
                 <SuggestQuestion closeModal={closeSuggestModal} /> {/* Pasa closeModal como una prop */}
                 <button onClick={closeSuggestModal}>Cerrar</button>
                 </div>
             </Modal>
+            </div>
         </div>
     );
 }

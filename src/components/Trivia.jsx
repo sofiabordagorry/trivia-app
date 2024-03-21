@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Modal from 'react-modal';
 import ReportError from './ReportError'; // Importa el componente ReportError
+import Spinner from './Spinner'; // Asegúrate de que este es el camino correcto a tu archivo Spinner.jsx
 
 function Trivia() {
     const [allQuestions, setAllQuestions] = useState([]);
@@ -15,6 +16,7 @@ function Trivia() {
     const [reportModalIsOpen, setReportModalIsOpen] = useState(false);
     const { type, count } = useParams(); // Obtenemos el tipo y el count de la URL
     const questionCount = parseInt(count);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('/data/questions.json')
@@ -59,14 +61,18 @@ function Trivia() {
     };
     
     const handleAnswer = () => {
+        const updatedUserAnswers = [...userAnswers];
+        updatedUserAnswers[currentQuestion] = userAnswer;
+        
         if (userAnswer === questions[currentQuestion].answer) {
             setScore(score + 1);
         }
-        setUserAnswers([...userAnswers, userAnswer]); // Añade la respuesta del usuario al array
+        
+        setUserAnswers(updatedUserAnswers);
         setCurrentQuestion(currentQuestion + 1);
         setUserAnswer(''); // Reseteamos la respuesta del usuario
     };
-
+    
     const openCompareModal = () => {
         setCompareModalIsOpen(true);
     };
@@ -83,6 +89,26 @@ function Trivia() {
         setReportModalIsOpen(false);
     };
 
+    useEffect(() => {
+        // Simula la carga de datos
+        setTimeout(() => {
+            setLoading(false);
+        }, 500); // Cambia este valor al tiempo de carga de tus datos
+    }, []);
+
+    useEffect(() => {
+        if (currentQuestion === questions.length) {
+            setLoading(true);
+            setTimeout(() => {
+                setLoading(false);
+            }, 300); // Cambia este valor al tiempo de carga de tus datos
+        }
+    }, [currentQuestion, questions]);
+
+    if (loading) {
+        return <Spinner />;
+    }
+
     const renderQuestion = () => {
         switch (questions[currentQuestion].type) {
             case 'multipleChoice':
@@ -98,7 +124,7 @@ function Trivia() {
             case 'fillInTheBlank':
                 return (
                     <div>
-                        <input type="text" value={userAnswer} onChange={e => setUserAnswer(e.target.value)} />
+                        <input className="fill" type="text" value={userAnswer} onChange={e => setUserAnswer(e.target.value)} />
                     </div>
                 );
             case 'trueOrFalse':
@@ -115,41 +141,58 @@ function Trivia() {
 
     return (
         <div>
-            <h1>Trivia de {type}</h1>
+            <h1>{type === 'random' ? 'Trivia Aleatoria' : `Trivia de ${type}`}</h1>
             {/* Barra de progreso */}
-            <div style={{ height: '20px', width: '100%', backgroundColor: '#f3f3f3' }}>
-                <div style={{ height: '100%', width: `${(currentQuestion / questions.length) * 100}%`, backgroundColor: 'cyan' }} />
+            <div className="barra" >
+                <div style={{ height: '100%', width: `${(currentQuestion / questions.length) * 100}%`, backgroundColor: '#5bdb34' }} />
             </div>
             {questions.length > 0 ? (
                 currentQuestion < questions.length ? (
-                    <div>
-                        <p>{questions[currentQuestion].question}</p>
+                    <div className="question-container">
+                        <p className="question-text">{questions[currentQuestion].question}</p>
                         {renderQuestion()}
                         {(userAnswer || (questions[currentQuestion].type === 'fillInTheBlank' && userAnswer !== '')) && (
                             <button onClick={handleAnswer}>Siguiente pregunta</button>
                         )}
+                    <div style={{ textAlign: 'right' }}>
+                        <Link to="/">
+                            <button>Volver al inicio</button>
+                        </Link>
                     </div>
-                ) : (
-                    <div>
+                    </div>
+            ) : (
+                loading ? (
+                    <Spinner /> // Muestra el spinner mientras se cargan los resultados
+                ) : (                    <div className="results-container">
                         <h2>¡Has terminado la trivia!</h2>
-                        <p>Tu puntuación final es: {score}</p>
+                        <p className="final-score">Tu puntuación final es: {score}</p>
                         <button onClick={() => setCurrentQuestion(0)}>Volver a jugar</button>
-                        <button><Link to="/">Volver al inicio</Link></button>
+                        <Link to="/"><button>Volver al inicio</button></Link>
                         <button onClick={openCompareModal}>Comparar mis respuestas</button>
                         
-                        <Modal
-                            isOpen={compareModalIsOpen}
-                            onRequestClose={closeCompareModal}
-                            contentLabel="Comparar respuestas"
-                        >
-                            <div className="modal-content">
-                            <h2>Comparar respuestas</h2>
+                                            <Modal
+                        isOpen={compareModalIsOpen}
+                        onRequestClose={closeCompareModal}
+                        contentLabel="Comparar respuestas"
+                    >
+                        <div className="modal-content">
+                            <h2 className="compare-answer">Comparar respuestas</h2>
                             {questions.map((question, index) => (
                                 <div key={index}>
-                                    <span>{userAnswers[index] === question.answer ? <i className="bi bi-check"></i> : <i className="bi bi-x"></i>}</span>
-                                    <p>Pregunta: {question.question}</p>
-                                    <p>Respuesta correcta: {question.answer}</p>
-                                    <p>Tu respuesta: {userAnswers[index]}</p>
+                                    <div className="question-info">
+                                        <p>
+                                            {userAnswers[index] == question.answer ? (
+                                                <i className="bi bi-check"></i>
+                                            ) : (
+                                                <i className="bi bi-x"></i>
+                                            )}
+                                            {question.question}
+                                        </p>
+                                    </div>
+                                    <div className="answer-info">
+                                        <div className="answer-item">Tu respuesta: {userAnswers[index]}</div>
+                                        <div className="answer-item">Respuesta correcta: {question.answer}</div>
+                                    </div>
                                     <button onClick={openReportModal}>Reportar error</button>
                                     <Modal
                                         isOpen={reportModalIsOpen}
@@ -157,17 +200,22 @@ function Trivia() {
                                         contentLabel="Reportar error"
                                     >
                                         <div className="modal-content">
-                                        <h2>Reportar error</h2>
-                                        <ReportError question={question.question} closeModal={closeReportModal} /> {/* Pasa closeModal como una prop */}
-                                        <button onClick={closeReportModal}>Cerrar</button>
+                                            <h2 className="report-error">Reportar error</h2>
+                                            <ReportError
+                                                question={question.question}
+                                                closeModal={closeReportModal}
+                                            />
+                                            <button onClick={closeReportModal}>Cerrar</button>
                                         </div>
                                     </Modal>
                                 </div>
                             ))}
                             <button onClick={closeCompareModal}>Cerrar</button>
-                            </div>
-                        </Modal>
+                        </div>
+                    </Modal>
+
                     </div>
+                )
                 )
             ) : (
                 <p>Cargando preguntas...</p>
