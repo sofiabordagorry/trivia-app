@@ -9,10 +9,8 @@ import Footer from './Footer';
 function Welcome() {
     const [loading, setLoading] = useState(true);
     const [suggestModalIsOpen, setSuggestModalIsOpen] = useState(false);
-    const handleRandomClick = (count) => {
-        // Redirige al usuario a /trivia/random/count
-        window.location.href = `/trivia/random/${count}`;
-    };
+    const [randomModalIsOpen, setRandomModalIsOpen] = useState(false);
+    
     const openSuggestModal = () => {
         setSuggestModalIsOpen(true);
     };
@@ -20,6 +18,15 @@ function Welcome() {
     const closeSuggestModal = () => {
         setSuggestModalIsOpen(false);
     };
+
+    const openRandomModal = () => {
+        setRandomModalIsOpen(true);
+    };
+
+    const closeRandomModal = () => {
+        setRandomModalIsOpen(false);
+    };
+
 
     useEffect(() => {
         // Simula la carga de datos
@@ -37,9 +44,40 @@ function Welcome() {
             <h1>Bienvenido a la Trivia de Sistemas Operativos</h1>
             <div className="options-container">
             <p class="options-text">Elige una opción para comenzar:</p>
-            <button onClick={() => handleRandomClick(10)}>Random 10 preguntas</button>
-            <button onClick={() => handleRandomClick(30)}>Random 30 preguntas</button>
-            <button onClick={() => handleRandomClick(50)}>Random 50 preguntas</button>
+            <button onClick={openRandomModal}>Trivia Aleatoria</button>
+            <Modal
+                    isOpen={randomModalIsOpen}
+                    onRequestClose={closeRandomModal}
+                    contentLabel="Seleccionar cantidad de preguntas"
+                >
+                    <div className="modal-content">
+                        <h2 className="report-error">Seleccionar cantidad de preguntas</h2>
+                        <p>Por favor, selecciona la cantidad de preguntas que deseas responder:</p>
+                        <div>
+                        <Link to={`/trivia/random/10`}>
+                        <button>Responder 10 preguntas</button>
+                        </Link>
+                        </div>
+                        <div>
+                        <Link to={`/trivia/random/30`}>
+                        <button>Responder 30 preguntas</button>
+                        </Link>
+                        </div>
+                        <div>
+                        <Link to={`/trivia/random/50}`}>
+                        <button>Responder 50 preguntas</button>
+                        </Link>
+                        </div>
+                        <div>
+                        <Link to={`/trivia/random/100}`}>
+                        <button>Responder 100 preguntas</button>
+                        </Link>
+                        </div>
+                        <div>
+                        <button onClick={closeRandomModal}>Cerrar</button>
+                        </div>
+                    </div>
+                </Modal>
             <Link to="/select-theme">
             <button>Seleccionar Tema</button>
             </Link>
