@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import SuggestQuestion from './SuggestQuestion';
 import Spinner from './Spinner'; // Asegúrate de que este es el camino correcto a tu archivo Spinner.jsx
+import Footer from './Footer';
 
 
 function Welcome() {
@@ -56,6 +57,18 @@ function Welcome() {
                 </div>
             </Modal>
             </div>
+            <div className="options-container">
+                <p className="info-text">
+                    Este proyecto fue creado con el propósito de ayudar a los estudiantes de Sistemas Operativos a estudiar la parte teórica del curso. Está basado en el curso de 
+                    Sistemas Operativos de la Facultad de Ingeniería (FING) de la Universidad de la República, específicamente en las ediciones de 2023 y 2024 (porque la cursé dos veces).
+                    Contiene preguntas basadas en las diapositivas del curso, de los parciales y de los éxamenes. Si tienes alguna sugerencia o pregunta que quieras agregar, puedes hacerlo en la sección de "Sugerir Pregunta".
+                    ¡Mucho éxito!
+                </p>
+                <p className='info-text'>
+                    PD: Los temás de la sección "Seleccionar Tema" se irán actualizando y por ahora todas las preguntas son exclusivamente teóricas, en un futuro se espera poder tener preguntas más prácticas también :).
+                </p>
+            </div>
+            {!loading && <Footer />} {/* Renderizar el Footer solo cuando no hay spinner */}
         </div>
     );
 }

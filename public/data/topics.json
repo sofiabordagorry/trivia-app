@@ -1,6 +1,7 @@
 {
   "topics": [
-    "Introducción",
-    "Estructura de los Sistemas de Computación"
+    {"name": "Introducción", "implemented": "si"},
+    {"name": "Estructura de los Sistemas de Computación", "implemented": "si"},
+    {"name": "Estructura de los Sistemas de Operativos", "implemented": "no"}
   ]
 }

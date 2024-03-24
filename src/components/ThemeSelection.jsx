@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Spinner from './Spinner'; // Importa el componente Spinner
+import Footer from './Footer';
+import Modal from 'react-modal';
+import ErrorNotImplemented from './ErrorNotImplemented';
 
 function ThemeSelection() {
     const [loading, setLoading] = useState(true);
     const [themes, setThemes] = useState([]);
+    const [questionsModalIsOpen, setQuestionsModalIsOpen] = useState(false);
+    const [selectedTheme, setSelectedTheme] = useState(null);
 
     useEffect(() => {
         fetch('/data/topics.json')
@@ -24,6 +29,22 @@ function ThemeSelection() {
         return <Spinner />;
     }
 
+    const openQuestionsModal = () => {
+        setQuestionsModalIsOpen(true);
+    };
+
+    const closeQuestionsModal = () => {
+        setQuestionsModalIsOpen(false);
+    };
+
+    const handleThemeClick = (theme) => {
+        setSelectedTheme(theme);
+        if (theme.implemented === 'no') {
+            // Redirige a la página de error para temas no implementados
+            return;
+        }
+        openQuestionsModal();
+    };
 
 
     return (
@@ -31,13 +52,50 @@ function ThemeSelection() {
             <h1>Selecciona un tema</h1>
             <div className='options-container'>
             {themes.map((theme, index) => (
-                <Link to={`/trivia/${theme}/10`}>
-                <button key={index}>
-                {theme}
-                </button>
-                </Link>
-            ))}
+                <div className="topics" key={index}>
+                <Link to={theme.implemented === 'no' ? '/error-not-implemented' : '#'}>
+                    <button onClick={() => handleThemeClick(theme)}>
+                        {theme.name} 
+                    </button>
+                </Link>             
+                </div>
+                ))}                 
+                {selectedTheme && 
+                <Modal
+                    isOpen={questionsModalIsOpen}
+                    onRequestClose={closeQuestionsModal}
+                    contentLabel="Seleccionar cantidad de preguntas"
+                >
+                    <div className="modal-content">
+                        <h2 className="report-error">Seleccionar cantidad de preguntas</h2>
+                        <p>Por favor, selecciona la cantidad de preguntas que deseas responder:</p>
+                        <div>
+                        <Link to={`/trivia/${selectedTheme.name}/10`}>
+                        <button>Responder 10 preguntas</button>
+                        </Link>
+                        </div>
+                        <div>
+                        <Link to={`/trivia/${selectedTheme.name}/30`}>
+                        <button>Responder 30 preguntas</button>
+                        </Link>
+                        </div>
+                        <div>
+                        <Link to={`/trivia/${selectedTheme.name}/all`}>
+                        <button>Responder todas las preguntas</button>
+                        </Link>
+                        </div>
+                        <div>
+                        <button onClick={closeQuestionsModal}>Cerrar</button>
+                        </div>
+                    </div>
+                </Modal>}
+                <div style={{ textAlign: 'right' }}>
+                        <Link to="/">
+                            <button>Volver al inicio</button>
+                        </Link>
+                    </div>
             </div>
+            {!loading && <Footer />} {/* Renderizar el Footer solo cuando no hay carga */}
         </div>
     );
 }

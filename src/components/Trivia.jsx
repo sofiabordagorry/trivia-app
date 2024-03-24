@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Modal from 'react-modal';
-import ReportError from './ReportError'; // Importa el componente ReportError
-import Spinner from './Spinner'; // Asegúrate de que este es el camino correcto a tu archivo Spinner.jsx
+import ReportError from './ReportError'; 
+import Spinner from './Spinner'; 
+import Footer from './Footer';
 
 function Trivia() {
     const [allQuestions, setAllQuestions] = useState([]);
@@ -36,11 +37,15 @@ function Trivia() {
 
     useEffect(() => {
         if (allQuestions.length > 0) {
-            const shuffled = shuffle(allQuestions);
-            const selected = shuffled.slice(0, questionCount); // Usamos questionCount en lugar de un número fijo
+            let selected;
+            if (count === 'all') {
+                selected = allQuestions;
+            } else {
+                selected = shuffle(allQuestions).slice(0, parseInt(count));
+            }
             setQuestions(selected);
         }
-    }, [allQuestions, questionCount]); // Agregamos questionCount a las dependencias
+    }, [allQuestions, count]);
 
     const shuffle = array => {
         let currentIndex = array.length, temporaryValue, randomIndex;
@@ -205,6 +210,8 @@ function Trivia() {
                                                 question={question.question}
                                                 closeModal={closeReportModal}
                                             />
+                                        
+                                        
                                             <button onClick={closeReportModal}>Cerrar</button>
                                         </div>
                                     </Modal>
@@ -217,9 +224,10 @@ function Trivia() {
                     </div>
                 )
                 )
-            ) : (
+            ) : (+
                 <p>Cargando preguntas...</p>
             )}
+            {!loading && <Footer />} {/* Renderizar el Footer solo cuando no hay carga */}
         </div>
     );
 }

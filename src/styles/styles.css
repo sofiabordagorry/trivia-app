@@ -1,11 +1,12 @@
 /* styles.css */
 body {
-    background-color: #008080; /* Un tono de verde */
-    color: white; /* Letras blancas */
+    background-color: #008080; 
+    color: white;
     text-align: center;
     background-repeat: repeat; /* Repetir la imagen en todas las direcciones */
 }
 
+/* titulos */ 
 h1 {
     color: white;
     background-color: rgba(256, 256, 256, 0.52);
@@ -16,52 +17,21 @@ h1 {
     font-size: 3em;
     text-shadow: 5px 2px 4px #000000;
     -webkit-text-stroke: 0.7px black; /* Borde negro de 1 píxel para navegadores WebKit (Safari, Chrome) */
-    text-stroke: 0.7px black; /* Borde negro de 1 píxel */
 }
-
-.loading {
-    font-size: 2.5em;
-}
-
-.question-text, .options-text {
-    font-size: 2em;
-    color: black;
-    font-style: italic; /* Establece el texto en cursiva */
-}
-
-.final-score {
-    font-size: 1.5em;
-    color: black;
-}
-
 
 h2 {
     color: black;
     font-size: 2em;
 }
 
-.compare-answer, .report-error, .suggest{
+.error{
     color: white;
-}
-
-button {
-    background-color: #FFA500; /* Naranja */
-    color: rgb(39, 38, 38); /* Letras blancas */
-    border: none;
-    padding: 15px 32px;
+    background-color: transparent;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+    justify-content: center;
 }
 
-button:hover {
-    background-color: #FF4500; /* Un tono más oscuro de naranja */
-    color: white;
-}
+/* Spinner y pantalla de carga*/
 
 /* Spinner */
 .spinner-container {
@@ -82,6 +52,10 @@ button:hover {
     animation: spin 2s linear infinite;
     margin-bottom: 20px; /* Espacio para el mensaje */
 }
+
+.loading { /* texto de la pantalla de carga */
+    font-size: 2.5em;
+}
 /* Safari */
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
@@ -93,18 +67,73 @@ button:hover {
     100% { transform: rotate(360deg); }
 }
 
+/* textos*/
+.question-text, .options-text {
+    font-size: 2em;
+    color: black;
+    font-style: italic; 
+}
+
+.info-text{
+    font-size: 1em;
+    color: black;
+}
+
+.final-score {
+    font-size: 1.5em;
+    color: black;
+}
+
+.compare-answer, .report-error, .suggest{
+    color: white;
+}
+
+/* barra de progreso */
+
+.barra {
+    height: 20px;
+    width: 70%;
+    background-color: #f3f3f3;
+    border: 2px black solid;
+    padding: 0;
+    margin: 0 auto; 
+    display: flex; 
+}
+
+/* botones */
+
+button {
+    background-color: #FFA500; 
+    color: rgb(39, 38, 38); 
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF4500; 
+    color: white;
+}
+
+/* Modals */
+
 .ReactModal__Overlay {
-    background-color: transparent !important; /* Gris oscuro transparente */
+    background-color: transparent !important; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #008080; /* Un tono de verde */
+    background-color: #008080; 
 
 }
 
-
 .ReactModal__Content {
-    background: #2f2f2f !important; /* Gris oscuro */
+    background: #2f2f2f !important;
     width: 80%;
     max-width: 800px;
     position: relative !important;
@@ -128,19 +157,21 @@ button:hover {
     bottom: 0;
     left: 0;
     z-index: 9999;
-    background-color: #2f2f2f; /* Gris oscuro */
-    margin: 0 auto; /* Establece los márgenes izquierdo y derecho en automático para centrar el div */
+    background-color: #2f2f2f;
+    margin: 0 auto;
 
 }
 
 .modal-content {
     width: 80%;
     max-width: 900px;
-    background-color: #2f2f2f; /* Gris oscuro */    
+    background-color: #2f2f2f; 
     padding: 20px;
     border-radius: 4px;
-    margin: 0 auto; /* Establece los márgenes izquierdo y derecho en automático para centrar el div */
+    margin: 0 auto; 
 }
+
+/* Forms de los modals*/
 
 form {
     display: flex;
@@ -161,8 +192,8 @@ form textarea {
 }
 
 form input[type="submit"] {
-    background-color: #FFA500; /* Naranja */
-    color: white; /* Letras blancas */
+    background-color: #FFA500; 
+    color: white; 
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -175,11 +206,9 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #FF4500; /* Un tono más oscuro de naranja */
+    background-color: #FF4500;
     color: white;
 }
-
-/* styles.css */
 .options-container, .question-container, .results-container {
     background-color: rgba(256, 256, 256, 0.52);
     padding: 50px; 
@@ -189,40 +218,81 @@ form input[type="submit"]:hover {
     box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
 }
 
-.barra {
-    height: 20px;
-    width: 70%;
-    background-color: #f3f3f3;
-    border: 2px black solid;
-    padding: 0;
-    margin: 0 auto; /* Establece los márgenes izquierdo y derecho en automático para centrar el div */
-    display: flex; /* Usa flexbox para alinear el contenido */
-}
+/* Model para ver los resultados especificamente*/
 
-/* styles.css */
-.modal-content {
-    padding: 20px;
-}
-
-/* styles.css */
 .answer-info {
     display: flex;
-    justify-content: space-around; /* Distribuye los elementos de forma equitativa */
+    justify-content: space-around; 
 }
 
 .answer-item {
-    flex: 0.25; /* Hace que los elementos dentro de .answer-info tengan un ancho más pequeño */
+    flex: 0.25; 
 }
-
 
 .bi {
-    font-size: 24px; /* Tamaño más grande para el tick/cruz */
-    margin-left: 10px; /* Espacio entre el texto de la pregunta y el tick/cruz */
+    font-size: 24px; 
+    margin-left: 10px;
 }
+
+/* Preguntas fillInTheBlank*/
 
 .fill {
     width: 100%;
     max-width: 400px;
     height: 50px;
-    font-size: 20px; /* Cambia esto al tamaño de fuente que desees */
+    font-size: 20px; 
+}
+
+/* imagenes */
+
+/* ErrorNotImplemented.css */
+.error-container {
+    text-align: center;
+}
+
+.images-cute {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* footer */
+
+footer {
+    text-align: center;
+    background-color: #5e5952;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+}
+
+footer p, footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer p {
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer .bi {
+    font-size: 24px;
+    margin-right: 5px;
+    color: white; /* Cambiar el color de los íconos */
 }
