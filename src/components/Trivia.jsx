@@ -18,6 +18,7 @@ function Trivia() {
     const { type, count } = useParams(); // Obtenemos el tipo y el count de la URL
     const questionCount = parseInt(count);
     const [loading, setLoading] = useState(true);
+    const [showErrorMessage, setShowErrorMessage] = useState(false); // Estado para controlar si se muestra el mensaje de error
 
     useEffect(() => {
         fetch('/data/questions.json')
@@ -66,6 +67,22 @@ function Trivia() {
     };
     
     const handleAnswer = () => {
+            // Verificar si la pregunta es de tipo fillInTheBlank y el usuario no ha escrito nada
+            if (questions[currentQuestion].type === 'fillInTheBlank' && !userAnswer.trim()) {
+                setShowErrorMessage(true);
+                return;
+            }
+        
+            // Verificar si la pregunta es de tipo multipleChoice o trueOrFalse y el usuario no ha seleccionado ninguna respuesta
+            if ((questions[currentQuestion].type === 'multipleChoice' || questions[currentQuestion].type === 'trueOrFalse') && !userAnswer) {
+                console.log('Multiple choice or true or false question with no answer provided');
+                setShowErrorMessage(true);
+                return;
+            }
+        
+            // Ocultar el mensaje de error si el usuario ha proporcionado una respuesta
+            setShowErrorMessage(false);
+
         const updatedUserAnswers = [...userAnswers];
         updatedUserAnswers[currentQuestion] = userAnswer;
         
@@ -77,6 +94,18 @@ function Trivia() {
         setCurrentQuestion(currentQuestion + 1);
         setUserAnswer(''); // Reseteamos la respuesta del usuario
     };
+
+    useEffect(() => {
+        if (currentQuestion < questions.length) {
+            if (questions[currentQuestion].type === 'fillInTheBlank' && !userAnswer.trim()) {
+                setShowErrorMessage(true);
+            } else if ((questions[currentQuestion].type === 'multipleChoice' || questions[currentQuestion].type === 'trueOrFalse') && !userAnswer) {
+                setShowErrorMessage(true);
+            } else {
+                setShowErrorMessage(false);
+            }
+        }
+    }, [currentQuestion, questions, userAnswer]);
     
     const openCompareModal = () => {
         setCompareModalIsOpen(true);
@@ -153,18 +182,21 @@ function Trivia() {
             </div>
             {questions.length > 0 ? (
                 currentQuestion < questions.length ? (
-                    <div className="question-container">
-                        <p className="question-text">{questions[currentQuestion].question}</p>
-                        {renderQuestion()}
-                        {(userAnswer || (questions[currentQuestion].type === 'fillInTheBlank' && userAnswer !== '')) && (
-                            <button onClick={handleAnswer}>Siguiente pregunta</button>
-                        )}
+                <div className="question-container">
+                    <p className="question-text">{questions[currentQuestion].question}</p>
+                    {renderQuestion()}
+                    {showErrorMessage  && ( // Mostrar mensaje de error si no hay respuesta seleccionada
+                        <p style={{ color: 'red' }}>Seleccione una respuesta antes de pasar a la siguiente pregunta</p>
+                    )}
+                    <button onClick={handleAnswer} disabled={!userAnswer}>
+                        Siguiente pregunta
+                    </button>
                     <div className="botonInicio">
                         <Link to="/">
                             <button>Volver al inicio</button>
                         </Link>
                     </div>
-                    </div>
+                </div>
             ) : (
                 loading ? (
                     <Spinner /> // Muestra el spinner mientras se cargan los resultados
