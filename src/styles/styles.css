@@ -112,13 +112,25 @@ button {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
     cursor: pointer;
+    width: 150px; /* Establecer un ancho fijo para todos los botones */
+    height: 100px; /* Establecer una altura fija para todos los botones */
 }
 
 button:hover {
     background-color: #FF4500; 
     color: white;
+}
+
+.botonInicio{
+    text-align: right;
+}
+
+.selected-button {
+    background-color: #FF4500;
+    color: white;
+    /* Agrega cualquier otro estilo que desees para resaltar el botón seleccionado */
 }
 
 /* Modals */
@@ -211,13 +223,23 @@ form input[type="submit"]:hover {
 }
 .options-container, .question-container, .results-container {
     background-color: rgba(256, 256, 256, 0.52);
-    padding: 50px; 
+    padding: 50px;
     border-radius: 5px; 
     margin: 60px; 
     height: 80%;
     box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
 }
 
+
+.about {
+    background-color: rgba(256, 256, 256, 0.52);
+    padding: 50px;
+    border-radius: 5px; 
+    margin: 60px; 
+    margin-bottom: 90px !important;
+    height: 80%;
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+}
 /* Model para ver los resultados especificamente*/
 
 .answer-info {
@@ -255,6 +277,45 @@ form input[type="submit"]:hover {
     height: auto;
 }
 
+.content {
+    overflow: hidden; /* Clearfix para limpiar el float */
+}
+
+.images-cute-right {
+    float: right; 
+    margin-left: 20px; 
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between; /* Divide el contenedor en dos columnas */
+}
+
+.options-left {
+    width: 60%; /* Ocupa el 50% del ancho del contenedor */
+    text-align: center;
+    justify-content: center;
+}
+
+.options-right {
+    width: 50%; /* Ocupa el 50% del ancho del contenedor */
+    text-align: center; /* Alinea el contenido a la derecha */
+    justify-content: center;
+}
+
+.topics-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topics{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 
 /* footer */
 
@@ -269,6 +330,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 -10px;
+    z-index: 999; /* Asegura que el footer esté sobre otros elementos */
 }
 
 footer p, footer ul {
@@ -295,4 +357,46 @@ footer .bi {
     font-size: 24px;
     margin-right: 5px;
     color: white; /* Cambiar el color de los íconos */
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+.botonInicio{
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 768px) {
+    .options-container {
+        align-items: center; 
+        display:inline-block;
+        text-align: center; /* Centra el texto */
+    }
+
+    .options-right {
+        text-align: center; /* Alinea el contenido a la izquierda */
+    }
+
+    .question-text, .options-text {
+        font-size: 1.5em; 
+    }
+    .topics-container{
+        display: inline-block;
+    }
+
+    .topics{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .images-cute-right, .images-preguntas {
+        max-width: 50px; /* Cambia el ancho máximo para dispositivos móviles */
+        width: 80px;
+        padding: 10px;
+    }
+}
+
+.images-preguntas{
+    max-width: 300px;
 }

@@ -120,7 +120,7 @@ function Trivia() {
                 return (
                     <div>
                         {questions[currentQuestion].options.map((option, index) => (
-                            <button key={index} onClick={() => setUserAnswer(option)}>
+                            <button key={index} onClick={() => setUserAnswer(option)} className={userAnswer === option ? "selected-button" : ""}>
                                 {option}
                             </button>
                         ))}
@@ -135,8 +135,8 @@ function Trivia() {
             case 'trueOrFalse':
                 return (
                     <div>
-                        <button onClick={() => setUserAnswer("true")}>Verdadero</button>
-                        <button onClick={() => setUserAnswer("false")}>Falso</button>
+                        <button onClick={() => setUserAnswer("true")}  className={userAnswer === "true" ? "selected-button" : ""}>Verdadero</button>
+                        <button onClick={() => setUserAnswer("false")} className={userAnswer === "false" ? "selected-button" : ""}>Falso</button>
                     </div>
                 );
             default:
@@ -159,7 +159,7 @@ function Trivia() {
                         {(userAnswer || (questions[currentQuestion].type === 'fillInTheBlank' && userAnswer !== '')) && (
                             <button onClick={handleAnswer}>Siguiente pregunta</button>
                         )}
-                    <div style={{ textAlign: 'right' }}>
+                    <div className="botonInicio">
                         <Link to="/">
                             <button>Volver al inicio</button>
                         </Link>
@@ -170,11 +170,12 @@ function Trivia() {
                     <Spinner /> // Muestra el spinner mientras se cargan los resultados
                 ) : (                    <div className="results-container">
                         <h2>¡Has terminado la trivia!</h2>
+                        <div>
                         <p className="final-score">Tu puntuación final es: {score}</p>
-                        <button onClick={() => setCurrentQuestion(0)}>Volver a jugar</button>
-                        <Link to="/"><button>Volver al inicio</button></Link>
-                        <button onClick={openCompareModal}>Comparar mis respuestas</button>
-                        
+                        <button onClick={() => setCurrentQuestion(0)} style={{ verticalAlign: 'middle' }}>Volver a jugar</button>
+                        <Link to="/"><button style={{ verticalAlign: 'middle' }}>Volver al inicio</button></Link>
+                        <button style={{ verticalAlign: 'middle' }} onClick={openCompareModal}>Comparar mis respuestas</button>
+                        </div>
                                             <Modal
                         isOpen={compareModalIsOpen}
                         onRequestClose={closeCompareModal}

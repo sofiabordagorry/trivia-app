@@ -43,59 +43,66 @@ function Welcome() {
         <div>
             <h1>Bienvenido a la Trivia de Sistemas Operativos</h1>
             <div className="options-container">
-            <p class="options-text">Elige una opción para comenzar:</p>
-            <button onClick={openRandomModal}>Trivia Aleatoria</button>
-            <Modal
-                    isOpen={randomModalIsOpen}
-                    onRequestClose={closeRandomModal}
-                    contentLabel="Seleccionar cantidad de preguntas"
+            <div className="options-right">
+                <div className='content'>
+                    <img src="images/PerritoEstudiando.png" alt="Cute Dog" className="images-preguntas" />
+                </div>
+            </div>
+            <div className="options-left">
+                <p class="options-text">Elige una opción para comenzar:</p>
+                <button onClick={openRandomModal}>Trivia Aleatoria</button>
+                <Modal
+                        isOpen={randomModalIsOpen}
+                        onRequestClose={closeRandomModal}
+                        contentLabel="Seleccionar cantidad de preguntas"
+                    >
+                        <div className="modal-content">
+                            <h2 className="report-error">Seleccionar cantidad de preguntas</h2>
+                            <p>Por favor, selecciona la cantidad de preguntas que deseas responder:</p>
+                            <div>
+                            <Link to={`/trivia/random/10`}>
+                            <button>Responder 10 preguntas</button>
+                            </Link>
+                            </div>
+                            <div>
+                            <Link to={`/trivia/random/30`}>
+                            <button>Responder 30 preguntas</button>
+                            </Link>
+                            </div>
+                            <div>
+                            <Link to={`/trivia/random/50}`}>
+                            <button>Responder 50 preguntas</button>
+                            </Link>
+                            </div>
+                            <div>
+                            <Link to={`/trivia/random/100}`}>
+                            <button>Responder 100 preguntas</button>
+                            </Link>
+                            </div>
+                            <div>
+                            <button onClick={closeRandomModal}>Cerrar</button>
+                            </div>
+                        </div>
+                    </Modal>
+                <Link to="/select-theme">
+                <button>Seleccionar Tema</button>
+                </Link>
+                <p class="options-text">O puedes:</p>
+                <button onClick={openSuggestModal}>Sugerir Pregunta</button>
+                <Modal
+                    isOpen={suggestModalIsOpen}
+                    onRequestClose={closeSuggestModal}
+                    contentLabel="Sugerir Pregunta"
                 >
                     <div className="modal-content">
-                        <h2 className="report-error">Seleccionar cantidad de preguntas</h2>
-                        <p>Por favor, selecciona la cantidad de preguntas que deseas responder:</p>
-                        <div>
-                        <Link to={`/trivia/random/10`}>
-                        <button>Responder 10 preguntas</button>
-                        </Link>
-                        </div>
-                        <div>
-                        <Link to={`/trivia/random/30`}>
-                        <button>Responder 30 preguntas</button>
-                        </Link>
-                        </div>
-                        <div>
-                        <Link to={`/trivia/random/50}`}>
-                        <button>Responder 50 preguntas</button>
-                        </Link>
-                        </div>
-                        <div>
-                        <Link to={`/trivia/random/100}`}>
-                        <button>Responder 100 preguntas</button>
-                        </Link>
-                        </div>
-                        <div>
-                        <button onClick={closeRandomModal}>Cerrar</button>
-                        </div>
+                    <h2 className="suggest">Sugerir Pregunta</h2>
+                    <SuggestQuestion closeModal={closeSuggestModal} /> {/* Pasa closeModal como una prop */}
+                    <button onClick={closeSuggestModal}>Cerrar</button>
                     </div>
                 </Modal>
-            <Link to="/select-theme">
-            <button>Seleccionar Tema</button>
-            </Link>
-            <p class="options-text">O puedes:</p>
-            <button onClick={openSuggestModal}>Sugerir Pregunta</button>
-            <Modal
-                isOpen={suggestModalIsOpen}
-                onRequestClose={closeSuggestModal}
-                contentLabel="Sugerir Pregunta"
-            >
-                <div className="modal-content">
-                <h2 className="suggest">Sugerir Pregunta</h2>
-                <SuggestQuestion closeModal={closeSuggestModal} /> {/* Pasa closeModal como una prop */}
-                <button onClick={closeSuggestModal}>Cerrar</button>
                 </div>
-            </Modal>
             </div>
-            <div className="options-container">
+            <div className="about">
                 <p className="info-text">
                     Este proyecto fue creado con el propósito de ayudar a los estudiantes de Sistemas Operativos a estudiar la parte teórica del curso. Está basado en el curso de 
                     Sistemas Operativos de la Facultad de Ingeniería (FING) de la Universidad de la República, específicamente en las ediciones de 2023 y 2024 (porque la cursé dos veces).

@@ -51,6 +51,7 @@ function ThemeSelection() {
         <div>
             <h1>Selecciona un tema</h1>
             <div className='options-container'>
+                <div className="topics-container">
             {themes.map((theme, index) => (
                 <div className="topics" key={index}>
                 <Link to={theme.implemented === 'no' ? '/error-not-implemented' : '#'}>
@@ -75,8 +76,8 @@ function ThemeSelection() {
                         </Link>
                         </div>
                         <div>
-                        <Link to={`/trivia/${selectedTheme.name}/30`}>
-                        <button>Responder 30 preguntas</button>
+                        <Link to={`/trivia/${selectedTheme.name}/20`}>
+                        <button>Responder 20 preguntas</button>
                         </Link>
                         </div>
                         <div>
@@ -89,11 +90,19 @@ function ThemeSelection() {
                         </div>
                     </div>
                 </Modal>}
-                <div style={{ textAlign: 'right' }}>
-                        <Link to="/">
-                            <button>Volver al inicio</button>
-                        </Link>
+                </div>
+                <div style={{textAlign: 'center', justifyContent: 'center', marginTop: '0px'}}>
+                <div>
+                    <Link to="/">
+                        <button>Volver al inicio</button>
+                    </Link>
+                </div>
+            </div>
+                <div className="options-right">
+                    <div className='content'>
+                        <img src="/images/PerritoPensando.png" alt="perrito" className="images-preguntas" />
                     </div>
+                </div>
             </div>
             {!loading && <Footer />} {/* Renderizar el Footer solo cuando no hay carga */}
         </div>
