@@ -83,16 +83,30 @@ function Trivia() {
             // Ocultar el mensaje de error si el usuario ha proporcionado una respuesta
             setShowErrorMessage(false);
 
+        if (questions[currentQuestion].type==='fillInTheBlank'){
+            // Convertir la respuesta del usuario y la respuesta correcta a minúsculas y quitar los tildes antes de comparar
+            const userAnswerNormalized = userAnswer.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            const correctAnswerNormalized = questions[currentQuestion].answer.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            const updatedUserAnswers = [...userAnswers];
+            updatedUserAnswers[currentQuestion] = userAnswerNormalized;
+            if (userAnswerNormalized === correctAnswerNormalized) {
+                setScore(score + 1);
+            }
+            setUserAnswers(updatedUserAnswers);
+            setCurrentQuestion(currentQuestion + 1);
+            setUserAnswer(''); // Reseteamos la respuesta del usuario
+        }
+        else{
         const updatedUserAnswers = [...userAnswers];
         updatedUserAnswers[currentQuestion] = userAnswer;
-        
+            
         if (userAnswer === questions[currentQuestion].answer) {
             setScore(score + 1);
         }
-        
         setUserAnswers(updatedUserAnswers);
         setCurrentQuestion(currentQuestion + 1);
         setUserAnswer(''); // Reseteamos la respuesta del usuario
+        }
     };
 
     useEffect(() => {
@@ -191,7 +205,7 @@ function Trivia() {
                     <button onClick={handleAnswer} disabled={!userAnswer}>
                         Siguiente pregunta
                     </button>
-                    <div className="botonInicio">
+                    <div>
                         <Link to="/">
                             <button>Volver al inicio</button>
                         </Link>

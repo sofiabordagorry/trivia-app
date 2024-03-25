@@ -76,8 +76,8 @@ function ThemeSelection() {
                         </Link>
                         </div>
                         <div>
-                        <Link to={`/trivia/${selectedTheme.name}/20`}>
-                        <button>Responder 20 preguntas</button>
+                        <Link to={`/trivia/${selectedTheme.name}/15`}>
+                        <button>Responder 15 preguntas</button>
                         </Link>
                         </div>
                         <div>
@@ -94,7 +94,7 @@ function ThemeSelection() {
                 <div style={{textAlign: 'center', justifyContent: 'center', marginTop: '0px'}}>
                 <div>
                     <Link to="/">
-                        <button>Volver al inicio</button>
+                        <button className="botonInicio">Volver al inicio</button>
                     </Link>
                 </div>
             </div>

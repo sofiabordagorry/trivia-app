@@ -2,19 +2,19 @@
   "Introducción": [
     {
       "type": "multipleChoice",
-      "question": "Pregunta 1",
+      "question": "Un sistema operativo es un intermediario entre: ",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "los programas, la memoria y el hardware",
+        "el usuario, los programas y el hardware",
+        "el software y el hardware",
+        "el usuario y el hardware"
       ],
-      "answer": "b",
+      "answer": "el usuario, los programas y el hardware",
       "id": "00"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 2",
+      "question": "Una de las principales metas de un sistema operativo es administrar el hardware de forma equitativa y eficiente",
       "options": [
         "true",
         "false"
@@ -24,37 +24,37 @@
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 3",
+      "question": "En este tipo de sistema, el usuario envía un conjunto de trabajos a la computadora y el sistema operativo los procesa uno tras otros",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Por lotes",
+        "De tiempo compartido",
+        "De tiempo real",
+        "Paralelos"
       ],
-      "answer": "c",
+      "answer": "Por lotes",
       "id": "02"  
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 4",
-      "answer": "word",
+      "question": "Cuando un sistema paralelo es de tipo ______ coupled, los canales de interconexión son de alta velocidad.",
+      "answer": "tightly",
       "id": "03"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 5",
+      "question": "En este tipo de sistema, se ejecutan programas en forma concurrente con un alto context switch para que los usuarios interactúen con el sistema como si fuesen el único usuario (cuando en realidad no es asi)",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Por lotes",
+        "De tiempo compartido",
+        "De tiempo real",
+        "Paralelos"
       ],
-      "answer": "d",
+      "answer": "De tiempo compartido",
       "id": "04"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 6",
+      "question": "Los sistemas simétricos se caracterizan por tener la ejecución del código del núcleo del sistema asignada a un único procesador",
       "options": [
         "true",
         "false"
@@ -63,26 +63,32 @@
       "id": "05"
     },
     {
-      "type": "fillInTheBlank",
-      "question": "Pregunta 7",
-      "answer": "word",
+      "type": "multipleChoice",
+      "question": "Sistemas diseñados para manejar procesos y dispositivos en tiempo real con tiempos de respuesta muy corto y predecible",
+      "options": [
+        "Por lotes",
+        "De tiempo compartido",
+        "De tiempo real",
+        "Paralelos"
+      ],
+      "answer": "De tiempo real",
       "id": "06"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 8",
+      "question": "Se dispone de más de un procesador, permiten la ejecución simultánea y sincronización de más de un proceso. Pueden ser tightly coupled o loosely coupled ",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Por lotes",
+        "De tiempo compartido",
+        "De tiempo real",
+        "Paralelos"
       ],
-      "answer": "a",
+      "answer": "Paralelos",
       "id": "07"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 9",
+      "question": "Los sistemas SIMD ejecutan la misma instrucción sobre un conjunto distinto de datos",
       "options": [
         "true",
         "false"
@@ -91,26 +97,30 @@
       "id": "08"
     },
     {
-      "type": "fillInTheBlank",
-      "question": "Pregunta 10",
-      "answer": "word", 
+      "type": "trueOrFalse",
+      "question": "Los sistemas multiprocesadores caen en la categoría SISD en la taxonomía de Flynn",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
       "id": "09"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 11",
+      "question": "Arquitectura secuencial donde no existe paralelismo",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "SISD",
+        "SIMD",
+        "MISD",
+        "MIMD"
       ],
-      "answer": "b",
+      "answer": "SISD",
       "id": "010"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 12",
+      "question": "La multiprogramación aumenta los tiempos de espera de los procesos",
       "options": [
         "true",
         "false"
@@ -120,25 +130,25 @@
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 13",
-      "answer": "word",
+      "question": "Un sistema ___ es aquel donde el núcleo se dispone en memoria común y puede ser ejecutado por cualquier procesador",
+      "answer": "simetrico",
       "id": "012"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 14",
+      "question": "Sistemas con procesadores autonomos que ejecutan en forma simultanea, diferentes instrucciones sobre diferentes datos.",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "SISD",
+        "SIMD",
+        "MISD",
+        "MIMD"
       ],
-      "answer": "c",
+      "answer": "MIMD",
       "id": "013"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 15",
+      "question": "Una de las ventajas de un procesador simétrico es que tienen una mayor tolerancia a fallos",
       "options": [
         "true",
         "false"
@@ -148,48 +158,52 @@
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 16",
-      "answer": "word",
+      "question": "Una de las tareas principales de un sistema operativo es la _____ de memoria",
+      "answer": "administracion",
       "id": "015"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 17",
+      "question": "¿Cuál de las siguientes NO es una ventaja de la multiprogramación?",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Genera una asignación justa de los recursos",
+        "Permite que los programas se ejecuten simultáneamente",
+        "Aumenta la eficiencia y utilización del hardware",
+        "Reduce los tiempos de espera de los procesos"
       ],
-      "answer": "d",
+      "answer": "Genera una asignación justa de los recursos",
       "id": "016"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 18",
+      "question": "En un sistema de tiempo real, todo resultado debe producirse en un cierto tiempo o el sistema falla",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "id": "017"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Los sistemas batch multiprogramas tenían un tiempo de retorno bastante rápido",
       "options": [
         "true",
         "false"
       ],
       "answer": "false",
-      "id": "017"
-    },
-    {
-      "type": "fillInTheBlank",
-      "question": "Pregunta 19",
-      "answer": "word",
       "id": "018"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 20",
+      "question": "Estos sistemas se pueden dividir entre sistemas de memoria compartida y sistemas de memoria distribuida",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "SISD",
+        "SIMD",
+        "MISD",
+        "MIMD"
       ],
-      "answer": "a",
+      "answer": "MIMD",
       "id":  "019"
     }
   ],

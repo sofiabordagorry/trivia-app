@@ -45,7 +45,7 @@ function Welcome() {
             <div className="options-container">
             <div className="options-right">
                 <div className='content'>
-                    <img src="images/PerritoEstudiando.png" alt="Cute Dog" className="images-preguntas" />
+                    <img src="images/PerritoEstudiando.png" alt="Cute Dog" className="images-cute" />
                 </div>
             </div>
             <div className="options-left">
