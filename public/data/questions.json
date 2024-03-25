@@ -210,19 +210,19 @@
   "Estructura de los Sistemas de Computación": [
     {
       "type": "multipleChoice",
-      "question": "Pregunta 1",
+      "question": "¿Cuál de las siguientes instrucciones NO es privilegiada?",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Cambio al modo monitor",
+        "Escritura de memoria protegida",
+        "Leer el reloj del sistema",
+        "Desactivar las interrupciones"
       ],
-      "answer": "b",
+      "answer": "Leer el reloj del sistema",
       "id": "10"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 2",
+      "question": "Un device driver es un dispositivo de software",
       "options": [
         "true",
         "false"
@@ -232,149 +232,149 @@
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 3",
+      "question": "¿Cuál de los siguientes es un dispositivo de entrada/salida?",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Disco",
+        "Caches",
+        "Registros",
+        "Memoría física tipo RAM"
       ],
-      "answer": "c",
+      "answer": "Disco",
       "id": "12"
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 4",
-      "answer": "word",
+      "question": "Las controladoras de dispositivos tienen su propio ___ de memoria",
+      "answer": "buffer",
       "id": "13"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 5",
+      "question": "La superficie de los platos de los dispositivos magnéticos se divide en",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Pistas",
+        "Sectores",
+        "Cilindros",
+        "Esferas"
       ],
-      "answer": "d",
+      "answer": "Pistas",
       "id": "14"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 6",
+      "question": "Las interrupciones son la forma principal de comunicarse con el sistema operativo",
       "options": [
         "true",
         "false"
       ],
-      "answer": "false",
+      "answer": "true",
       "id": "15"
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 7",
-      "answer": "word",
+      "question": "La tasa de ____ es la tasa con la cual los datos van entre el disco y la computadora",
+      "answer": "transferencia",
       "id": "16"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 8",
+      "question": "Considere los siguientes componentes del sistema de memoria, ¿Cuál es el que tiene una tasa de acceso más rápida?",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Cache",
+        "Registros",
+        "Memoria Principal",
+        "Discos magnéticos"
       ],
-      "answer": "a",
+      "answer": "Registros",
       "id": "17"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 9",
-      "options": [
-        "true",
-        "false"
-      ],
-      "answer": "true",
-      "id": "18"
-    },
-    {
-      "type": "fillInTheBlank",
-      "question": "Pregunta 10",
-      "answer": "word",
-      "id": "19"
-    },
-    {
-      "type": "multipleChoice",
-      "question": "Pregunta 11",
-      "options": [
-        "a",
-        "b",
-        "c",
-        "d"
-      ],
-      "answer": "b",
-      "id": "110"
-    },
-    {
-      "type": "trueOrFalse",
-      "question": "Pregunta 12",
+      "question": "La velocidad del procesador es similar a la velocidad de acceso a información que está en la RAM",
       "options": [
         "true",
         "false"
       ],
       "answer": "false",
-      "id": "111"
+      "id": "18"
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 13",
-      "answer": "word",
-      "id": "112"
+      "question": "Los ____ son la memoria más rápida que accede un procesador y están integrados al chip",
+      "answer": "registros",
+      "id": "19"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 14",
+      "question": "Considere los siguientes componentes del sistema de memoria, ¿Cuál es el que posee un mayor tamaño?",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Cache",
+        "Registros",
+        "Memoria Principal",
+        "Discos magnéticos"
       ],
-      "answer": "c",
-      "id": "113"
+      "answer": "Discos magnéticos",
+      "id": "110"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 15",
+      "question": "El sistema de memoria es construido en base a una jerarquía",
       "options": [
         "true",
         "false"
       ],
       "answer": "true",
+      "id": "111"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Las ____ interrumpen el flujo normal de un programa",
+      "answer": "interrupciones",
+      "id": "112"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿De qué consta un disco magnético?",
+      "options": [
+        "Una pista y un brazo mecánico",
+        "Varios sectores y un cilindro",
+        "Platos de metal y un brazo mecánico",
+        "Varios cilindros y una pista"
+      ],
+      "answer": "Platos de metal y un brazo mecánico",
+      "id": "113"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Los discos de estado sólido (SSD) están construidos con memoria flash volátil",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
       "id": "114"
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 16",
-      "answer": "word",
+      "question": "El tiempo de ______ es el tiempo que se tarda en ubicar el brazo en el cilindro adecuado, más el tiempo de rotar el plato al sector adecuado",
+      "answer": "posicionamiento",
       "id": "115"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 17",
+      "question": "¿Cuál de los siguientes NO es un método para realizar E/S?",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "Polling",
+        "E/S por Interrupciones",
+        "E/S mapeada a memoria",
+        "Acceso directo a memoria (DMA)"
       ],
-      "answer": "d",
+      "answer": "E/S mapeada a memoria",
       "id": "116"
     },
     {
       "type": "trueOrFalse",
-      "question": "Pregunta 18",
+      "question": "En la E/S usando DMA, se utiliza un chip especial que permite transferir datos de alguna controladora a memoria pero el procesador debe intervenir",
       "options": [
         "true",
         "false"
@@ -384,24 +384,53 @@
     },
     {
       "type": "fillInTheBlank",
-      "question": "Pregunta 19",
-      "answer": "word",
+      "question": "El polling se da cuando El procesador le comunica un pedido a la controladora del dispositivo y queda en un ____ waiting consultando a la controladora si está listo el pedido",
+      "answer": "busy",
       "id": "118"
     },
     {
       "type": "multipleChoice",
-      "question": "Pregunta 20",
+      "question": "Cuando se usa DMA para realizar una operación de E/S, ¿Quién se encarga de la tarea de transferencia?",
       "options": [
-        "a",
-        "b",
-        "c",
-        "d"
+        "El controlador DMA",
+        "El procesador",
+        "La memoria RAM",
+        "La memoria principal"
       ],
-      "answer": "a",
+      "answer": "El controlador DMA",
       "id": "119"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "agregar de proteccion de hardware",
+      "options": [
+        "El controlador DMA",
+        "El procesador",
+        "La memoria RAM",
+        "La memoria principal"
+      ],
+      "answer": "El controlador DMA",
+      "id": "129"
     }
   ],
   "Estructura de los Sistemas Operativos": [],
   "Procesos": [],
-  "Planificación": []
+  "Planificación": [],
+  "Introducción a la concurrencia": [],
+  "Sección crítica": [],
+  "Semáforos y utilización de semáforos": [],
+  "Monitores": [],
+  "ADA": [],
+  "Mailboxes (cola de mensajes)": [],
+  "Deadlock": [],
+  "Administración de memoria I": [],
+  "Administración de memoria II": [],
+  "Memoria virtual": [],
+  "Sistema de archivos I": [],
+  "Sistema de archivos II": [],
+  "Estructuras de dispositivos masivos de datos": [],
+  "Subsistema de entrada y salida": [],
+  "Seguridad: introducción": [],
+  "Seguridad: UNIX": [],
+  "Virtualización": []
 }

@@ -2,7 +2,7 @@
   "topics": [
     {"name": "Introducción", "implemented": "si"},
     {"name": "Estructura de los Sistemas de Computación", "implemented": "no"},
-    {"name": "Estructura de los Sistemas de Operativos", "implemented": "no"},
+    {"name": "Estructura de los Sistemas Operativos", "implemented": "no"},
     {"name": "Procesos", "implemented": "no"},
     {"name": "Planificación", "implemented": "no"},
     {"name": "Introducción a la concurrencia", "implemented": "no"},
