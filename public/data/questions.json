@@ -32,7 +32,7 @@
         "Paralelos"
       ],
       "answer": "Por lotes",
-      "id": "02"  
+      "id": "02"
     },
     {
       "type": "fillInTheBlank",
@@ -204,7 +204,7 @@
         "MIMD"
       ],
       "answer": "MIMD",
-      "id":  "019"
+      "id": "019"
     }
   ],
   "Estructura de los Sistemas de Computación": [
@@ -401,6 +401,60 @@
       "id": "119"
     },
     {
+      "type": "fillInTheBlank",
+      "question": "Para el mecanismo de protección "modo dual", se deben proveer al menos ____  modos de operación",
+      "answer": "dos",
+      "id": "120"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Para aplicar el mecanismo de protección de Entrada/Salida, todas las instrucciones de Entrada/Salida deben ser privilegiadas",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "id": "121"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Para aplicar el mecanismo de protección de Memoria, las direcciones se evalúan a través del CPU",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "122"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Para aplicar el mecanismo de protección de CPU, se introduce un ___ que regula su uso",
+      "answer": "timer",
+      "id": "123"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El modo monitor solo puede ejecutar una cantidad reducida de instrucciones",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "124"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En el modo dual, el bit que indica en qué modo se encuentra el sistema es...",
+      "options": [
+        "mode bit",
+        "control bit",
+        "protection bit",
+        "system bit"
+      ],
+      "answer": "mode bit",
+      "id": "125"
+    },
+    {
       "type": "multipleChoice",
       "question": "agregar de proteccion de hardware",
       "options": [
@@ -410,6 +464,38 @@
         "La memoria principal"
       ],
       "answer": "El controlador DMA",
+      "id": "126"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El registro que contiene el tamaño del bloque de memoria a partir del registro base se llama límite.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "id": "127"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "La MMU es la que controla el acceso a memoria y es un dispositivo de hardware",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "id": "128"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "La unidad que convierte direcciones lógicas a físicas es...",
+      "options": [
+        "La CPU",
+        "El disco",
+        "La MMU",
+        "La RAM"
+      ],
+      "answer": "La MMU",
       "id": "129"
     }
   ],

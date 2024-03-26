@@ -14,25 +14,25 @@ function ErrorNotImplemented() {
         }, 500); // Cambia este valor al tiempo de carga de tus datos
     }, []);
 
-   
+
     if (loading) {
         return <Spinner />;
     }
- 
+
     return (
         <div>
-        <div>
-            <h1 className="error">Lo sentimos, aún no está implementada la trivia para este tema :(</h1>
-        </div>
-        {!loading && <Footer />} 
-        <div style={{ textAlign: 'center', justifyContent: 'center' }}>
-            <Link to="/">
-                <button>Volver al inicio</button>
-            </Link>
-        </div>
-        <div>
-            <img src="images/PerritoTrabajando.png" alt="Cute Dog" className="images-cute" />
-        </div>
+            <div>
+                <h1 className="error">Lo sentimos, aún no está implementada la trivia para este tema :(</h1>
+            </div>
+            {!loading && <Footer />}
+            <div style={{ textAlign: 'center', justifyContent: 'center' }}>
+                <Link to="/">
+                    <button>Volver al inicio</button>
+                </Link>
+            </div>
+            <div>
+                <img src="images/PerritoTrabajando.png" alt="Cute Dog" className="images-error" />
+            </div>
         </div>
     );
 }

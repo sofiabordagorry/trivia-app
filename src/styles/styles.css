@@ -1,12 +1,13 @@
 /* styles.css */
 body {
-    background-color: #008080; 
+    background-color: #008080;
     color: white;
     text-align: center;
-    background-repeat: repeat; /* Repetir la imagen en todas las direcciones */
+    background-repeat: repeat;
+    /* Repetir la imagen en todas las direcciones */
 }
 
-/* titulos */ 
+/* titulos */
 h1 {
     color: white;
     background-color: rgba(256, 256, 256, 0.52);
@@ -16,7 +17,8 @@ h1 {
     text-align: center;
     font-size: 3em;
     text-shadow: 5px 2px 4px #000000;
-    -webkit-text-stroke: 0.7px black; /* Borde negro de 1 píxel para navegadores WebKit (Safari, Chrome) */
+    -webkit-text-stroke: 0.7px black;
+    /* Borde negro de 1 píxel para navegadores WebKit (Safari, Chrome) */
 }
 
 h2 {
@@ -24,11 +26,13 @@ h2 {
     font-size: 2em;
 }
 
-.error{
+.error {
     color: white;
     background-color: transparent;
     text-align: center;
+    font-size: 2em;
     justify-content: center;
+    text-shadow: none;
 }
 
 /* Spinner y pantalla de carga*/
@@ -48,34 +52,49 @@ h2 {
     border-top: 16px solid rgb(51, 51, 51);
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
     animation: spin 2s linear infinite;
-    margin-bottom: 20px; /* Espacio para el mensaje */
+    margin-bottom: 20px;
+    /* Espacio para el mensaje */
 }
 
-.loading { /* texto de la pantalla de carga */
+.loading {
+    /* texto de la pantalla de carga */
     font-size: 2.5em;
 }
+
 /* Safari */
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* textos*/
-.question-text, .options-text {
+.question-text,
+.options-text {
     font-size: 2em;
     color: black;
-    font-style: italic; 
+    font-style: italic;
     margin-top: 20px;
 }
 
-.info-text{
+.info-text {
     font-size: 1em;
     color: black;
 }
@@ -85,7 +104,9 @@ h2 {
     color: black;
 }
 
-.compare-answer, .report-error, .suggest{
+.compare-answer,
+.report-error,
+.suggest {
     color: white;
 }
 
@@ -97,15 +118,15 @@ h2 {
     background-color: #f3f3f3;
     border: 2px black solid;
     padding: 0;
-    margin: 0 auto; 
-    display: flex; 
+    margin: 0 auto;
+    display: flex;
 }
 
 /* botones */
 
 button {
-    background-color: #FFA500; 
-    color: rgb(39, 38, 38); 
+    background-color: #FFA500;
+    color: rgb(39, 38, 38);
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -115,17 +136,19 @@ button {
     margin: 5px 4px;
     transition-duration: 0.2s;
     cursor: pointer;
-    width: 160px; /* Establecer un ancho fijo para todos los botones */
-    height: 115px; /* Establecer una altura fija para todos los botones */
+    width: 160px;
+    /* Establecer un ancho fijo para todos los botones */
+    height: 115px;
+    /* Establecer una altura fija para todos los botones */
     vertical-align: middle;
 }
 
 button:hover {
-    background-color: #FF4500; 
+    background-color: #FF4500;
     color: white;
 }
 
-.botonInicio{
+.botonInicio {
     text-align: center;
     margin-right: 30px;
 }
@@ -139,11 +162,11 @@ button:hover {
 /* Modals */
 
 .ReactModal__Overlay {
-    background-color: transparent !important; 
+    background-color: transparent !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #008080; 
+    background-color: #008080;
 
 }
 
@@ -180,10 +203,10 @@ button:hover {
 .modal-content {
     width: 80%;
     max-width: 900px;
-    background-color: #2f2f2f; 
+    background-color: #2f2f2f;
     padding: 20px;
     border-radius: 4px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 /* Forms de los modals*/
@@ -207,8 +230,8 @@ form textarea {
 }
 
 form input[type="submit"] {
-    background-color: #FFA500; 
-    color: white; 
+    background-color: #FFA500;
+    color: white;
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -224,38 +247,44 @@ form input[type="submit"]:hover {
     background-color: #FF4500;
     color: white;
 }
-.options-container, .question-container, .results-container {
+
+.options-container,
+.question-container,
+.results-container {
     background-color: rgba(256, 256, 256, 0.52);
     padding: 50px;
-    border-radius: 5px; 
-    margin: 60px; 
+    border-radius: 5px;
+    margin: 60px;
     height: 80%;
-    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+    box-sizing: border-box;
+    /* Incluir el relleno y el borde en el ancho total */
 }
 
 
 .about {
     background-color: rgba(256, 256, 256, 0.52);
     padding: 50px;
-    border-radius: 5px; 
-    margin: 60px; 
+    border-radius: 5px;
+    margin: 60px;
     margin-bottom: 90px !important;
     height: 80%;
-    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+    box-sizing: border-box;
+    /* Incluir el relleno y el borde en el ancho total */
 }
+
 /* Model para ver los resultados especificamente*/
 
 .answer-info {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 
 .answer-item {
-    flex: 0.25; 
+    flex: 0.25;
 }
 
 .bi {
-    font-size: 24px; 
+    font-size: 24px;
     margin-left: 10px;
 }
 
@@ -265,7 +294,7 @@ form input[type="submit"]:hover {
     width: 100%;
     max-width: 400px;
     height: 50px;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 /* imagenes */
@@ -275,55 +304,67 @@ form input[type="submit"]:hover {
     text-align: center;
 }
 
+.images-error {
+    max-width: 300px;
+    height: auto;
+    width: 100%;
+}
+
 .images-cute {
-    max-width: 100%;
+    max-width: 500px;
+    width: 100%;
     height: auto;
 }
 
 .content {
-    overflow: hidden; /* Clearfix para limpiar el float */
+    overflow: hidden;
+    /* Clearfix para limpiar el float */
 }
 
-.images-preguntas{
+.images-preguntas {
     max-width: 300px;
     padding-top: 50%;
 }
 
-.images-inicio{
+.images-inicio {
     max-width: 300px;
 }
 
 .images-cute-right {
-    float: right; 
-    margin-left: 20px; 
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
+    float: right;
+    margin-left: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 }
 
 .options-container {
     display: flex;
-    justify-content: space-between; /* Divide el contenedor en dos columnas */
+    justify-content: space-between;
+    /* Divide el contenedor en dos columnas */
 }
 
 .options-left {
-    width: 60%; /* Ocupa el 50% del ancho del contenedor */
+    width: 60%;
+    /* Ocupa el 50% del ancho del contenedor */
     text-align: center;
     justify-content: center;
 }
 
 .options-right {
-    width: 50%; /* Ocupa el 50% del ancho del contenedor */
-    text-align: center; /* Alinea el contenido a la derecha */
+    width: 50%;
+    /* Ocupa el 50% del ancho del contenedor */
+    text-align: center;
+    /* Alinea el contenido a la derecha */
     justify-content: center;
 }
 
-.topics-container{
+.topics-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.topics{
+.topics {
     margin-right: 10px;
     margin-bottom: 10px;
 }
@@ -342,10 +383,12 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 -10px;
-    z-index: 999; /* Asegura que el footer esté sobre otros elementos */
+    z-index: 999;
+    /* Asegura que el footer esté sobre otros elementos */
 }
 
-footer p, footer ul {
+footer p,
+footer ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -368,47 +411,59 @@ footer ul li:last-child {
 footer .bi {
     font-size: 24px;
     margin-right: 5px;
-    color: white; /* Cambiar el color de los íconos */
+    color: white;
+    /* Cambiar el color de los íconos */
 }
 
 /* Media query para dispositivos móviles */
 @media screen and (max-width: 768px) {
-.botonInicio{
-    text-align: center;
-}
+    .botonInicio {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .options-container {
-        align-items: center; 
-        display:inline-block;
-        text-align: center; /* Centra el texto */
+        align-items: center;
+        display: inline-block;
+        text-align: center;
+        /* Centra el texto */
     }
 
     .options-right {
-        text-align: center; /* Alinea el contenido a la izquierda */
+        text-align: center;
+        /* Alinea el contenido a la izquierda */
     }
 
-    .question-text, .options-text {
-        font-size: 1.5em; 
+    .question-text,
+    .options-text {
+        font-size: 1.5em;
     }
-    .topics-container{
+
+    .topics-container {
         display: inline-block;
     }
 
-    .topics{
+    .topics {
         margin: 0;
     }
 
-    .botonInicio{
+    .botonInicio {
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .images-cute-right, .images-preguntas {
-        max-width: 200px; /* Cambia el ancho máximo para dispositivos móviles */
+
+    .images-cute-right,
+    .images-error,
+    .images-preguntas {
+        max-width: 200px;
+        /* Cambia el ancho máximo para dispositivos móviles */
         width: 100%;
-        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 100px;
     }
 }
