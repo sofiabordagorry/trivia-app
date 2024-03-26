@@ -1,26 +1,92 @@
 {
   "topics": [
-    {"name": "Introducción", "implemented": "si"},
-    {"name": "Estructura de los Sistemas de Computación", "implemented": "no"},
-    {"name": "Estructura de los Sistemas Operativos", "implemented": "no"},
-    {"name": "Procesos", "implemented": "no"},
-    {"name": "Planificación", "implemented": "no"},
-    {"name": "Introducción a la concurrencia", "implemented": "no"},
-    {"name": "Sección crítica", "implemented": "no"},
-    {"name": "Semáforos y utilización de semáforos", "implemented": "no"},
-    {"name": "Monitores", "implemented": "no"},
-    {"name": "ADA", "implemented": "no"},
-    {"name": "Mailboxes (cola de mensajes)", "implemented": "no"},
-    {"name": "Deadlock", "implemented": "no"},
-    {"name": "Administración de memoria I", "implemented": "no"},
-    {"name": "Administración de memoria II", "implemented": "no"},
-    {"name": "Memoria virtual", "implemented": "no"},
-    {"name": "Sistema de archivos I", "implemented": "no"},
-    {"name": "Sistema de archivos II", "implemented": "no"},
-    {"name": "Estructuras de dispositivos masivos de datos", "implemented": "no"},
-    {"name": "Subsistema de entrada y salida", "implemented": "no"},
-    {"name": "Seguridad: introducción", "implemented": "no"},
-    {"name": "Seguridad: UNIX", "implemented": "no"},
-    {"name": "Virtualización", "implemented": "no"}
+    {
+      "name": "Introducción",
+      "implemented": "si"
+    },
+    {
+      "name": "Estructura de los Sistemas de Computación",
+      "implemented": "si"
+    },
+    {
+      "name": "Estructura de los Sistemas Operativos",
+      "implemented": "no"
+    },
+    {
+      "name": "Procesos",
+      "implemented": "no"
+    },
+    {
+      "name": "Planificación",
+      "implemented": "no"
+    },
+    {
+      "name": "Introducción a la concurrencia",
+      "implemented": "no"
+    },
+    {
+      "name": "Sección crítica",
+      "implemented": "no"
+    },
+    {
+      "name": "Semáforos y utilización de semáforos",
+      "implemented": "no"
+    },
+    {
+      "name": "Monitores",
+      "implemented": "no"
+    },
+    {
+      "name": "ADA",
+      "implemented": "no"
+    },
+    {
+      "name": "Mailboxes (cola de mensajes)",
+      "implemented": "no"
+    },
+    {
+      "name": "Deadlock",
+      "implemented": "no"
+    },
+    {
+      "name": "Administración de memoria I",
+      "implemented": "no"
+    },
+    {
+      "name": "Administración de memoria II",
+      "implemented": "no"
+    },
+    {
+      "name": "Memoria virtual",
+      "implemented": "no"
+    },
+    {
+      "name": "Sistema de archivos I",
+      "implemented": "no"
+    },
+    {
+      "name": "Sistema de archivos II",
+      "implemented": "no"
+    },
+    {
+      "name": "Estructuras de dispositivos masivos de datos",
+      "implemented": "no"
+    },
+    {
+      "name": "Subsistema de entrada y salida",
+      "implemented": "no"
+    },
+    {
+      "name": "Seguridad: introducción",
+      "implemented": "no"
+    },
+    {
+      "name": "Seguridad: UNIX",
+      "implemented": "no"
+    },
+    {
+      "name": "Virtualización",
+      "implemented": "no"
+    }
   ]
 }

@@ -402,7 +402,7 @@
     },
     {
       "type": "fillInTheBlank",
-      "question": "Para el mecanismo de protección "modo dual", se deben proveer al menos ____  modos de operación",
+      "question": "Para el mecanismo de protección en modo dual, se deben proveer al menos ____  modos de operación",
       "answer": "dos",
       "id": "120"
     },
