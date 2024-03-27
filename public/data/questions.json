@@ -10,6 +10,7 @@
         "el usuario y el hardware"
       ],
       "answer": "el usuario, los programas y el hardware",
+      "explicacion": "El sistema operativo un programa que funciona como intermediario entre el usuario, los programas y el hardware. Diapositiva 4, Introducción, Sistemas Operativos 2024.",
       "id": "00"
     },
     {
@@ -20,6 +21,7 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "Las metas del sistema operativo son: brindar un entorno para que los usuarios puedan ejecutar programas en forma conveniente, brindar un entorno para que los programas usen el hardware con facilidad, administrar el hardware de forma eficiente y equitativa, y proveer un entorno sin interferencias a cada usuario. Diapositiva 5, Introducción, Sistemas Operativos 2024.",
       "id": "01"
     },
     {
@@ -32,12 +34,14 @@
         "Paralelos"
       ],
       "answer": "Por lotes",
+      "explicacion": "Los sistemas batch (por lotes) son sistemas cuyas tareas relacionadas se agrupaban en conjuntos de trabajo para su procesamiento más eficiente. Soportaba un único trabajo a la vez. Diapositivas 11 y 12, Introducción, Sistemas Operativos 2024.",
       "id": "02"
     },
     {
       "type": "fillInTheBlank",
       "question": "Cuando un sistema paralelo es de tipo ______ coupled, los canales de interconexión son de alta velocidad.",
       "answer": "tightly",
+      "explicacion": "Los  sistemas altamente integrados (tightly coupled) son sistemas en donde los canales de interconexión son de alta velocidad (bus común o memoria compartida). Diapositiva 21, Introducción, Sistemas Operativos 2024.",
       "id": "03"
     },
     {
@@ -50,6 +54,7 @@
         "Paralelos"
       ],
       "answer": "De tiempo compartido",
+      "explicacion": "Sistemas de tiempo compartido, ejecutan programas en forma concurrente con una elevada tasa de despacho de procesador (context switch) de forma tal de permitir que los usuarios interactúen directamente con el sistema como si fueran su único usuario. Diapositiva 15, Introducción, Sistemas Operativos 2024.",
       "id": "04"
     },
     {
@@ -60,6 +65,7 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "Los sistemas simétricos tienen el código del núcleo en memoria común y por lo tanto puede ser ejecutado por cualquier procesador. Diapositiva 27, Introducción, Sistemas Operativos 2024.",
       "id": "05"
     },
     {
@@ -72,6 +78,7 @@
         "Paralelos"
       ],
       "answer": "De tiempo real",
+      "explicacion": "En los sistemas de tiempo real, todo resultado debe producirse en cierto tiempo o el sistema falla. Diapositiva 27, Introducción, Sistemas Operativos 2024.",
       "id": "06"
     },
     {
@@ -84,6 +91,7 @@
         "Paralelos"
       ],
       "answer": "Paralelos",
+      "explicacion": "Los sistemas paralelos son sistemas donde se dispone de más de un procesador, permiten la ejecución simultánea y sincronización de más de un proceso. Se clasifican en sistemas altamente integrados (tightly coupled) o sistemas poco integrados (loosely coupled). Diapositiva 21, Introducción, Sistemas Operativos 2024.",
       "id": "07"
     },
     {
@@ -94,6 +102,7 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "SIMD (Single Instruction, Multiple Data): Sistemas que ejecutan la misma instrucción sobre un conjunto distinto de datos (Sistemas vectoriales). Diapositiva 22, Introducción, Sistemas Operativos 2024.",
       "id": "08"
     },
     {
@@ -104,6 +113,7 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "Los sistemas multiprocesadores caen en la categoría MIMD en la taxonomía de Flynn pues son sistemas con procesadores autónomas que ejecutan en forma simultánea diferentes instrucciones sobre diferentes datos.",
       "id": "09"
     },
     {
@@ -116,6 +126,7 @@
         "MIMD"
       ],
       "answer": "SISD",
+      "explicacion": "SISD (Single Instruction, Single Data): Una arquitectura secuencial donde no existe paralelismo (Sistemas monoprocesadores). Diapositiva 22, Introducción, Sistemas Operativos 2024.",
       "id": "010"
     },
     {
@@ -126,6 +137,7 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "La multiprogramación reduce los tiempos de espera de los procesos debido a que los procesos no deben esperar a que otro termine por completo para poder ejecutar.",
       "id": "011"
     },
     {
@@ -499,7 +511,406 @@
       "id": "129"
     }
   ],
-  "Estructura de los Sistemas Operativos": [],
+  "Estructura de los Sistemas Operativos": [
+    {
+      "type": "trueOrFalse",
+      "question": "El sistema operativo se divide en ___ componentes",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "7",
+      "id": "20"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El sistema operativo debe brindar 5 tipos de servicios bássicos",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "id": "21"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: crear y destruir procesos?",
+      "options": [
+        "Operaciones de Entrada/Salida",
+        "Ejecución de programas y administración de procesos",
+        "Comunicación entre procesos",
+        "Detección y manipulación de errores"
+      ],
+      "answer": "Ejecución de programas y administración de procesos",
+      "id": "22"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: suspensión y reanundación de procesos?",
+      "options": [
+        "Operaciones de Entrada/Salida",
+        "Ejecución de programas y administración de procesos",
+        "Comunicación entre procesos",
+        "Manipulación del sistema de archivos"
+      ],
+      "answer": "Ejecución de programas y administración de procesos",
+      "id": "23"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: Proveer mecanismos para la cooperación y comunicación entre procesos?",
+      "options": [
+        "Operaciones de Entrada/Salida",
+        "Manipulación del sistema de archivos",
+        "Ejecución de programas y administración de procesos",
+        "Detección y manipulación de errores"
+      ],
+      "answer": "Ejecución de programas y administración de procesos",
+      "id": "24"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: Proveer mecanismos para prevenir al generación de deadlocks o lograr salir de ellos?",
+      "options": [
+        "Operaciones de Entrada/Salida",
+        "Ejecución de programas y administración de procesos",
+        "Detección y manipulación de errores",
+        "Manipulación del sistema de archivos"
+      ],
+      "answer": "Ejecución de programas y administración de procesos",
+      "id": "25"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Un usuario puede acceder directamente a un dispositivo de Entrada/Salida",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "26"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El sistema operativo debe proveer un conjunto de servicios que provean la interfase con el subsistema e implementen técnicas de cache, buffering y ____",
+      "answer": "spooling",
+      "id": "27"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: administrar el espacio libre?",
+      "options": [
+        "Ejecución de programas y administración de procesos",
+        "Manipulación del sistema de archivos",
+        "Comunicación entre procesos",
+        "Detección y manipulación de errores"
+      ],
+      "answer": "Manipulación del sistema de archivos",
+      "id": "28"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: asignación del lugar de la información?",
+      "options": [
+        "Manipulación del sistema de archivos",
+        "Ejecución de programas y administración de procesos",
+        "Detección y manipulación de errores",
+        "Comunicación entre procesos"
+      ],
+      "answer": "Manipulación del sistema de archivos",
+      "id": "29"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: algoritmos de planificación de disco?",
+      "options": [
+        "Ejecución de programas y administración de procesos",
+        "Manipulación del sistema de archivos",
+        "Comunicación entre procesos",
+        "Operaciones de Entrada/Salida"
+      ],
+      "answer": "Manipulación del sistema de archivos",
+      "id": "210"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "La comunicación de procesos se debe implementar únicamente para dispositivos que estén en el mismo computador (a través de memoria compartida)",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "211"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Si hay un fallo en la fuente de energía, el sistema operativo no debería tomar ninguna decision al respecto pues es algo externo",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "212"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Las system calls sirven para que los procesos puedan acceder a los ____ del sistema",
+      "answer": "servicios",
+      "id": "213"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En un llamado a una syscall, ¿Quién se encarga del primer paso, o sea, de cargar los parámetros en el lugar adecuado (stack o registro)?",
+      "options": [
+        "Proceso de usuario",
+        "Hardware",
+        "Núcleo del sistema",
+        "Memoria"
+      ],
+      "answer": "Proceso de usuario",
+      "id": "214"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En un llamado a una syscall, ¿Quién se encarga del segundo paso, o sea, de cargar el número de syscall en algún registro específico?",
+      "options": [
+        "Proceso de usuario",
+        "Hardware",
+        "Núcleo del sistema",
+        "Memoria"
+      ],
+      "answer": "Proceso de usuario",
+      "id": "215"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En un llamado a una syscall, ¿Quién se encarga del tercer paso, o sea, de invocar a la interrupción por software adecuada?",
+      "options": [
+        "Proceso de usuario",
+        "Hardware",
+        "Núcleo del sistema",
+        "Memoria"
+      ],
+      "answer": "Proceso de usuario",
+      "id": "216"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En un llamado a una syscall, ¿Quién se encarga de las siguientes tareas del cuarto paso: Cambio de bit a modo monitor e invocar al manejador de la interupcción que controla que el número de syscall pasado en el registro sea menor al mayor del sistema?",
+      "options": [
+        "Proceso de usuario",
+        "Hardware",
+        "Núcleo del sistema",
+        "Memoria"
+      ],
+      "answer": "Hardware",
+      "id": "217"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En un llamado a una syscall, ¿Quién se encarga de la última tarea del cuarto paso, o sea, de finalmente invocar a la system call?",
+      "options": [
+        "Proceso de usuario",
+        "Hardware",
+        "Núcleo del sistema",
+        "Memoria"
+      ],
+      "answer": "Núcleo del sistema",
+      "id": "218"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En un llamado a una syscall, ¿Quién se encarga del quinto passo, o sea, de poner el valor retornado por la syscall en algún registro específico?",
+      "options": [
+        "Proceso de usuario",
+        "Hardware",
+        "Núcleo del sistema",
+        "Memoria"
+      ],
+      "answer": "Núcleo del sistema",
+      "id": "219"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En un llamado a una syscall, ¿Quién se encarga del sexto paso, o sea, de volver el sistema a modo usuario y retornar el control al proceso que invocó la syscall, o eventualmente a otro?",
+      "options": [
+        "Proceso de usuario",
+        "Hardware",
+        "Núcleo del sistema",
+        "Memoria"
+      ],
+      "answer": "Núcleo del sistema",
+      "id": "220"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Existen 3 formas de pasar los parámetros al sistema operativos: A través de los registros, un bloque de memoria apuntado a través de un registro, o en el stack del proceso que realiza el llamado",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "id": "221"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué clasificación de syscall pertenecen las siguientes: Cargar, ejecutar, finalizar, abortar, cargar atributos, esperar por tiempo, esperar por un evento o señal, etc?",
+      "options": [
+        "Control de procesos",
+        "Gestión de archivos",
+        "Gestión de dispositivos",
+        "Gestión de información del sistema"
+      ],
+      "answer": "Control de procesos",
+      "id": "222"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué clasificación de syscall pertenecen las siguientes: crear, borrar, abrir, cerrar, leer, escribir?",
+      "options": [
+        "Comunicaciones",
+        "Gestión de dispositivos",
+        "Gestión de información del sistema",
+        "Gestión de archivos"
+      ],
+      "answer": "Gestión de archivos",
+      "id": "223"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué clasificación de syscall pertenecen las siguientes: requerir o liberar un dispositivo, buscar o cargar atributos de un dispositivo?",
+      "options": [
+        "Control de procesos",
+        "Gestión de información del sistema",
+        "Gestión de dispositivos",
+        "Comunicaciones"
+      ],
+      "answer": "Gestión de dispositivos",
+      "id": "224"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué clasificación de syscall pertenecen las siguientes:  obtener o cargar la hora del sistema, datos del sistema, de procesos?",
+      "options": [
+        "Gestión de archivos",
+        "Gestión de información del sistema",
+        "Control de procesos",
+        "Comunicaciones"
+      ],
+      "answer": "Gestion de información del sistema",
+      "id": "225"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿A qué clasificación de syscall pertenecen las siguientes: crear o destruir conexiones, enviar o recibir mensajes?",
+      "options": [
+        "Comunicaciones",
+        "Gestión de dispositivos",
+        "Gestión de archivos",
+        "Control de procesos"
+      ],
+      "answer": "Comunicaciones",
+      "id": "226"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Cuál de los siguientes diseños de sistema no tiene una estructura definida",
+      "options": [
+        "Sistema monolítico",
+        "Sistema en capas",
+        "Sistema microkernel"
+      ],
+      "answer": "Sistema monolítico",
+      "id": "227"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El sistema ______ no tiene ocultación de información, ya que cualquier procedimiento puede invocar a otro",
+      "answer": "monolitico",
+      "id": "228"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "En un diseño de sistema en capas, la capa 0 es el ____ y  la N es la de los procesos de usuario",
+      "answer": "hardware",
+      "id": "229"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Cuál de los siguientes diseños de sistema es el que se organiza en una jerarquía?",
+      "options": [
+        "Sistema monolítico",
+        "Sistema en capas",
+        "Sistema microkernel"
+      ],
+      "answer": "Sistema en capas",
+      "id": "230"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El sistema en capas es más eficiente frente al sistema monolítico porque tiene una definición más separada",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "231"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "¿Cuál de los siguientes diseños de sistema se constituye de un núcleo con un manejo mínimo de procesos memoria, y además provea de una capa de comunicación entre procesos?",
+      "options": [
+        "Sistema monolítico",
+        "Sistema en capas",
+        "Sistema microkernel"
+      ],
+      "answer": "Sistema microkernel",
+      "id": "232"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "En un sistema microkernel, la capa de comunicación es la funcionalidad principal del sistema",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "id": "233"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Una de las desventajas de un sistema microkernel es su insgeguridad",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "234"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El tipo 2 de hipervisor es el que corre directamente sobre el hardware",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "id": "235"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "¿Cuál de las siguientes NO es una desvenetaja de las máquinas virtuales?",
+      "options": [
+        "Extensos tiempos de respuesta",
+        "Tiempos de respuesta pocos predecibles",
+        "Poca disponibilidad"
+      ],
+      "answer": "Poca disponibilidad",
+      "id": "236"
+    }
+  ],
   "Procesos": [],
   "Planificación": [],
   "Introducción a la concurrencia": [],
