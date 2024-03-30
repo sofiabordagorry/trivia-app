@@ -143,6 +143,7 @@
     {
       "type": "fillInTheBlank",
       "question": "Un sistema ___ es aquel donde el núcleo se dispone en memoria común y puede ser ejecutado por cualquier procesador",
+      "explicacion": "Los sistemas simétricos tienen el código del núcleo en memoria común y por lo tanto puede ser ejecutado por cualquier procesador. Diapositiva 27, Introducción, Sistemas Operativos 2024.",
       "answer": "simetrico",
       "id": "012"
     },
@@ -156,22 +157,25 @@
         "MIMD"
       ],
       "answer": "MIMD",
+      "explicacion": "MIMD (Multiple Instruction, Multiple Data): Sistemas con procesadores autónomas que ejecutan en forma simultánea diferentes instrucciones sobre diferentes datos. Diapositiva 22, Introducción, Sistemas Operativos 2024.",
       "id": "013"
     },
     {
       "type": "trueOrFalse",
-      "question": "Una de las ventajas de un procesador simétrico es que tienen una mayor tolerancia a fallos",
+      "question": "Una de las ventajas de los sistemas simétricos es que tienen una mayor tolerancia a fallos",
       "options": [
         "true",
         "false"
       ],
       "answer": "true",
+      "explicacion": "En los sistemas simétricos, al no tener una jerarquía, cualquier procesador puede ejecutar cualquier tarea, por lo que si un procesaador se rompe otro podría cubrir su trabajo.",
       "id": "014"
     },
     {
       "type": "fillInTheBlank",
-      "question": "Una de las tareas principales de un sistema operativo es la _____ de memoria",
+      "question": "Una de las funciones básicas de un sistema operativo es la _____ de memoria",
       "answer": "administracion",
+      "explicacion": "Funciones básicas de un Sistema Operativo: Administración de procesos, Manejo de Interrupciones, Administración de memoria, Manejo del sistema de archivos, Administración de seguridad, Control de entrada/salida.",
       "id": "015"
     },
     {
@@ -184,6 +188,7 @@
         "Reduce los tiempos de espera de los procesos"
       ],
       "answer": "Genera una asignación justa de los recursos",
+      "explicacion": "Al usar multiprogramación, puede suceder que procesos hagan un uso constante de los recursos y que otros no puedan acceder a ellos. Por eso, se deben usar algoritmos de planificación que permitan una asignación justa de los recursos.",
       "id": "016"
     },
     {
@@ -194,16 +199,18 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "En los sistemas de tiempo real, todo resultado debe producirse en un cierto tiempo, o de lo contrario el sistema falla. Diapositiva 29, Introducción, Sistemas Operativos 2024.",
       "id": "017"
     },
     {
       "type": "trueOrFalse",
-      "question": "Los sistemas batch multiprogramas tenían un tiempo de retorno bastante rápido",
+      "question": "Los sistemas batch multiprogramados tenían un tiempo de retorno bastante rápido",
       "options": [
         "true",
         "false"
       ],
       "answer": "false",
+      "explicacion": "Los sistemas batch multiprogramas no teníana interacción con el usuario admeás de un tiempo de retorno extenso. Diapositiva 15, Introducción, Sistemas Operativos 2024.",
       "id": "018"
     },
     {
@@ -216,6 +223,7 @@
         "MIMD"
       ],
       "answer": "MIMD",
+      "explicacion": "Dentro de los sistemas MIMD se suelen hacer dos divisiones: Sistemas de memori compartida y Sistemas de memoria distribuida. Diapositiva 23, Introducción, Sistemas Operativos 2024.",
       "id": "019"
     }
   ],
@@ -230,6 +238,7 @@
         "Desactivar las interrupciones"
       ],
       "answer": "Leer el reloj del sistema",
+      "explicacion": "Leer el reloj del sistema no es una instrucción que implique un riesgo para la integridad del sistema y por lo tanto no es una instrucción privilegiada.",
       "id": "10"
     },
     {
@@ -240,6 +249,7 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "Al software que se comunica con la controladora se le denomina device driver. Diapositiva 21, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "11"
     },
     {
@@ -252,17 +262,19 @@
         "Memoría física tipo RAM"
       ],
       "answer": "Disco",
+      "explicacion": "Algunos dispositivos más comunes: impresoras, teclados, ratón, video, disco, red, etc. Diapositiva 4, Estructura de los Sistemas de Computación, Sistemas Operativos 2024",
       "id": "12"
     },
     {
       "type": "fillInTheBlank",
       "question": "Las controladoras de dispositivos tienen su propio ___ de memoria",
       "answer": "buffer",
+      "explicacion": "Las controladoras de dispositivos tienen su propio buffer de memoria. Diapositiva 13, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "13"
     },
     {
       "type": "multipleChoice",
-      "question": "La superficie de los platos de los dispositivos magnéticos se divide en",
+      "question": "La superficie de los platos de los discos magnéticos se divide en",
       "options": [
         "Pistas",
         "Sectores",
@@ -270,6 +282,7 @@
         "Esferas"
       ],
       "answer": "Pistas",
+      "explicacion": "La superficie de los platos de los discos magnéticos es dividida lógicamente en pista circulares. Diapositiva 14, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "14"
     },
     {
@@ -280,12 +293,14 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "Interrupciones: Es la forma principal de comunicarse con el sistema operativo. Diapositiva 11, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "15"
     },
     {
       "type": "fillInTheBlank",
       "question": "La tasa de ____ es la tasa con la cual los datos van entre el disco y la computadora",
       "answer": "transferencia",
+      "explicacion": "Tasa de transferencia: Tasa con la cual los datos van entre el disco y la computadora. Diapositiva 16, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "16"
     },
     {
@@ -298,6 +313,7 @@
         "Discos magnéticos"
       ],
       "answer": "Registros",
+      "explicacion": "Los registros son la memoria más rápida que accede un procesador. Diapositiva 12, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "17"
     },
     {
@@ -308,12 +324,14 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "La velocidad del procesador es varios órdenes de magnitud mayor que la velocidad de acceso a información que está en la memoria volátil (RAM). Diapositiva 7, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "18"
     },
     {
       "type": "fillInTheBlank",
       "question": "Los ____ son la memoria más rápida que accede un procesador y están integrados al chip",
       "answer": "registros",
+      "explicacion": "Los registros son la memoria más rápida que accede un procesador, con velocidad de acceso de 1 nsec. Diapositiva 12, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "19"
     },
     {
@@ -326,6 +344,7 @@
         "Discos magnéticos"
       ],
       "answer": "Discos magnéticos",
+      "explicacion": "Los discos magnéticos son los que poseen un mayor tamaño de las opciones presentadas, pudiendo tener de 1 a 500 GB. Diapositiva 12, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "110"
     },
     {
@@ -336,12 +355,14 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "El sistema de memoria es construido en base a una jerarquía, que permite mejorar la utilización del procesador. Diapositiva 12, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "111"
     },
     {
       "type": "fillInTheBlank",
       "question": "Las ____ interrumpen el flujo normal de un programa",
       "answer": "interrupciones",
+      "explicacion": "Interrupciones: interrumpen el flujo normal de un programa. Diapositiva 11, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "112"
     },
     {
@@ -354,6 +375,7 @@
         "Varios cilindros y una pista"
       ],
       "answer": "Platos de metal y un brazo mecánico",
+      "explicacion": "Un disco magnético consta de platos de metal que giran a alta velocidad y un brazo mecánico que contiene las cabezas de lectura/escritura para cada plato. Diapositiva 14, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "113"
     },
     {
@@ -364,12 +386,14 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "Los disccos de estado sólido (SSD) están construidos con memoria flash no volátil. Diapositiva 17, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "114"
     },
     {
       "type": "fillInTheBlank",
       "question": "El tiempo de ______ es el tiempo que se tarda en ubicar el brazo en el cilindro adecuado, más el tiempo de rotar el plato al sector adecuado",
       "answer": "posicionamiento",
+      "explicacion": "Tasa de posicionamiento: Es el tiempo que se tarda en unicar el brazo en el cilindro adecuado (seek time), más el tiempo de rotar el plato al sector adecuado (rotational latency). Diapositiva 16, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "115"
     },
     {
@@ -382,16 +406,18 @@
         "Acceso directo a memoria (DMA)"
       ],
       "answer": "E/S mapeada a memoria",
+      "explicacion": "Métodos para efectuar una operación de entrada-salida: Espera activa (Polling), Interrupciones (Interrupts) y Acceso directo a memoria (DMA). Diapositiva 26, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "116"
     },
     {
       "type": "trueOrFalse",
-      "question": "En la E/S usando DMA, se utiliza un chip especial que permite transferir datos de alguna controladora a memoria pero el procesador debe intervenir",
+      "question": "En la E/S usando DMA, se utiliza un chip especial que permite transferir datos de alguna controladora a memoria pero el procesador debe intervenir constantemente",
       "options": [
         "true",
         "false"
       ],
       "answer": "false",
+      "explicacion": "En la E/S usando DMA, se utiliza un chip especial que permite transferir datos de alguna controladora a memoria sin que el procesador tenga que intervenir en forma contínua. Diapositiva 26, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "117"
     },
     {
@@ -410,12 +436,14 @@
         "La memoria principal"
       ],
       "answer": "El controlador DMA",
+      "explicacion": "El procesador carga ciertos registros en el controlador DMA para realizar el pedido. El controlador DMA se encarga de la tarea de transferencia, interrumpiendo el procesador cuando finalizó. Diapositiva 30, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "119"
     },
     {
       "type": "fillInTheBlank",
       "question": "Para el mecanismo de protección en modo dual, se deben proveer al menos ____  modos de operación",
       "answer": "dos",
+      "explicacion": "Modo dual: Se provee de al menos dos modos de operación. Diapositivo 33, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "120"
     },
     {
@@ -426,6 +454,7 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "Protección de E/S: Todas las instrucciones de Entrada/Salida deben ser privilegiadas. Diapositiva 33, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "121"
     },
     {
@@ -436,22 +465,25 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "Protección de Memoria: Evaluación de las direcciones de memoria a través de la MMU. Diapositiva 33, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "122"
     },
     {
       "type": "fillInTheBlank",
       "question": "Para aplicar el mecanismo de protección de CPU, se introduce un ___ que regula su uso",
       "answer": "timer",
+      "explicacion": "Protección de CPU: Introducción de un timer que permite limitar el uso de CPU. Diapositiva 33, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "123"
     },
     {
       "type": "trueOrFalse",
-      "question": "El modo monitor solo puede ejecutar una cantidad reducida de instrucciones",
+      "question": "El modo monitor solo puede ejecutar una cantidad reducida de instrucciones de hardware",
       "options": [
         "true",
         "false"
       ],
       "answer": "false",
+      "explicacion": "En el modo monitor, todas las instrucciones de hardware están disponibles. Diapositiva 34, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "124"
     },
     {
@@ -464,28 +496,25 @@
         "system bit"
       ],
       "answer": "mode bit",
+      "explicacion": "En el modo dual, un bit, llamado mode bit, es agregado al hardware para indicar el modo actual. Diapositiva 34, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "125"
     },
     {
-      "type": "multipleChoice",
-      "question": "agregar de proteccion de hardware",
-      "options": [
-        "El controlador DMA",
-        "El procesador",
-        "La memoria RAM",
-        "La memoria principal"
-      ],
-      "answer": "El controlador DMA",
+      "type": "fillInTheBlank",
+      "question": "El registro que contiene la dirección más baja de memoria física a la que puede acceder un proceso se llama registro ____",
+      "answer": "base",
+      "explicacion": "Para validar cada dirección, se usan dos registros. Uno de ellos es el registro base que contiene la dirección de memoria física más baja que puede acceder. Diapositiva 38, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "126"
     },
     {
       "type": "trueOrFalse",
-      "question": "El registro que contiene el tamaño del bloque de memoria a partir del registro base se llama límite.",
+      "question": "El registro que contiene el tamaño del bloque de memoria a partir del registro base se llama registro límite.",
       "options": [
         "true",
         "false"
       ],
       "answer": "true",
+      "explicacion": "Para validar cada dirección, se usan dos registros. Uno de ellos es el registro límite, que contiene el tamaño del bloque de memoria a partir del registro base. Diapositiva 38, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "127"
     },
     {
@@ -496,6 +525,7 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "La unidad que convierte direcciones lógicas a físicas es la MMU (Memory Management Unit) y es la que controla el acceso a memoria. Esta es un dispositivo de hardware. Diapositiva 40, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "128"
     },
     {
@@ -508,6 +538,7 @@
         "La RAM"
       ],
       "answer": "La MMU",
+      "explicacion": "La unidad que convierte direcciones lógicas a físicas es la MMU (Memory Management Unit). Diapositiva 40, Estructura de los Sistemas de Computación, Sistemas Operativos 2024.",
       "id": "129"
     }
   ],
@@ -522,6 +553,7 @@
         "7"
       ],
       "answer": "7",
+      "explicacion": "Por su complejidad un sistema operativo debe ser, en su diseñado, modularizado en varios componentes: Administración de procesos, Administración de memoria, Subsistema de Entrada/Salida, Administración de almacenamiento secundario, Subsistema de archivos, Subsistema de red, Subsistema de protección. Diapositiva 4, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "20"
     },
     {
@@ -532,6 +564,7 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "Servicios básicoss que debe brindar un sistema operativo: Ejecución de programas y administración de procesos, Operaciones de Entrada/Salida, Manipulación de sistemas de archivos, Comunicación entre procesos, Detección y manipulación de errores. Diapositiva 5, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "21"
     },
     {
@@ -544,6 +577,7 @@
         "Detección y manipulación de errores"
       ],
       "answer": "Ejecución de programas y administración de procesos",
+      "explicacion": "El sistema albergará muchos procesos compitiendo por los recursos y será el responsable de proveer de medios o servicios para que realicen su tarea: Crear y destruir procesos, suspensión y reanundación de procesos, proveer mecanismos para la cooperación (sincronización) y comunicación entre los procesos, y proveer mecanismos para prevenir la generación de deadlocks o lograr salir de ellos (opcional). Diapositiva 8, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "22"
     },
     {
@@ -556,6 +590,7 @@
         "Manipulación del sistema de archivos"
       ],
       "answer": "Ejecución de programas y administración de procesos",
+      "explicacion": "El sistema albergará muchos procesos compitiendo por los recursos y será el responsable de proveer de medios o servicios para que realicen su tarea: Crear y destruir procesos, suspensión y reanundación de procesos, proveer mecanismos para la cooperación (sincronización) y comunicación entre los procesos, y proveer mecanismos para prevenir la generación de deadlocks o lograr salir de ellos (opcional). Diapositiva 8, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "23"
     },
     {
@@ -568,6 +603,7 @@
         "Detección y manipulación de errores"
       ],
       "answer": "Ejecución de programas y administración de procesos",
+      "explicacion": "El sistema albergará muchos procesos compitiendo por los recursos y será el responsable de proveer de medios o servicios para que realicen su tarea: Crear y destruir procesos, suspensión y reanundación de procesos, proveer mecanismos para la cooperación (sincronización) y comunicación entre los procesos, y proveer mecanismos para prevenir la generación de deadlocks o lograr salir de ellos (opcional). Diapositiva 8, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "24"
     },
     {
@@ -580,6 +616,7 @@
         "Manipulación del sistema de archivos"
       ],
       "answer": "Ejecución de programas y administración de procesos",
+      "explicacion": "El sistema albergará muchos procesos compitiendo por los recursos y será el responsable de proveer de medios o servicios para que realicen su tarea: Crear y destruir procesos, suspensión y reanundación de procesos, proveer mecanismos para la cooperación (sincronización) y comunicación entre los procesos, y proveer mecanismos para prevenir la generación de deadlocks o lograr salir de ellos (opcional). Diapositiva 8, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "25"
     },
     {
@@ -590,12 +627,14 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "Por eficiencia y protección los usuarios no accederán directamente al dispositivo de Entrada/Salida. Diapositiva 11, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "26"
     },
     {
       "type": "fillInTheBlank",
       "question": "El sistema operativo debe proveer un conjunto de servicios que provean la interfase con el subsistema e implementen técnicas de cache, buffering y ____",
       "answer": "spooling",
+      "explicacion": "El sistema operativo debe proveer un conjunto de servicios que provean la interfase con el subsistema e implementen técnicas de cache, buffering y spooling. Diapositiva 12, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "27"
     },
     {
@@ -608,6 +647,7 @@
         "Detección y manipulación de errores"
       ],
       "answer": "Manipulación del sistema de archivos",
+      "explicacion": "Manipulación del sistema de archivos. El sistema operativo es responsable de las siguientes actividades: Administrar el espacio libre, Asignación del lugar libre de la información, algoritmos de planificación de disco. Diapositiva 13, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "28"
     },
     {
@@ -620,6 +660,7 @@
         "Comunicación entre procesos"
       ],
       "answer": "Manipulación del sistema de archivos",
+      "explicacion": "Manipulación del sistema de archivos. El sistema operativo es responsable de las siguientes actividades: Administrar el espacio libre, Asignación del lugar libre de la información, algoritmos de planificación de disco. Diapositiva 13, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "29"
     },
     {
@@ -632,6 +673,7 @@
         "Operaciones de Entrada/Salida"
       ],
       "answer": "Manipulación del sistema de archivos",
+      "explicacion": "Manipulación del sistema de archivos. El sistema operativo es responsable de las siguientes actividades: Administrar el espacio libre, Asignación del lugar libre de la información, algoritmos de planificación de disco. Diapositiva 13, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "210"
     },
     {
@@ -642,6 +684,7 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "Se deberá proveer mecanismos de comunicación entre procesos ya sea que estén en el mismo computador (a través de memoria compartida), o en diferentes computadores (a través de transferencias de paquetes de red entre los sistemas operativos involucrados). Diapositiva 14, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "211"
     },
     {
@@ -652,12 +695,14 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "El sistema deberá tomar decisiones adecuadas ante eventuales errores que ocurran y proveer una interfaaz para manejarlos. Ejemplos: fallo en un dispositivo de memoria, fallo en la fuente de energía, fallo en un programa. Diapositiva 15, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "212"
     },
     {
       "type": "fillInTheBlank",
       "question": "Las system calls sirven para que los procesos puedan acceder a los ____ del sistema",
       "answer": "servicios",
+      "explicacion": "Las system calls son una interfaz, provista por el núcleo, para que los procesos de  usuarios accedan a los diferentes servicios que brinda el sistema operativo. Diapositiva 21, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "213"
     },
     {
@@ -670,6 +715,7 @@
         "Memoria"
       ],
       "answer": "Proceso de usuario",
+      "explicacion": "En un llamado a una syscall, el proceso de usuario se encarga de cargar los parámetros en el lugar adecuado (stack o registro) ya que es quien realiza el llamado. Diapositiva 22, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "214"
     },
     {
@@ -682,6 +728,7 @@
         "Memoria"
       ],
       "answer": "Proceso de usuario",
+      "explicacion": "En un llamado a una syscall, el proceso de usuario se encarga de cargar el número de syscall en algún registro específico ya que es quien realiza el llamado. Diapositiva 22, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "215"
     },
     {
@@ -694,6 +741,7 @@
         "Memoria"
       ],
       "answer": "Proceso de usuario",
+      "explicacion": "En un llamado a una syscall, el proceso de usuario se encarga de invocar a la interrupción por software adecuada ya que es quien realiza el llamado. Diapositiva 22, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "216"
     },
     {
@@ -706,6 +754,7 @@
         "Memoria"
       ],
       "answer": "Hardware",
+      "explicacion": "En un llamado a una syscall, el hardware se encarga de las siguientes tareas del cuarto paso: Cambio de bit a modo monitor e invocar al manejador de la interupción que controla que el número de syscall pasado en el registro sea menor al mayor del sistema. Diapositiva 22, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "217"
     },
     {
@@ -718,11 +767,12 @@
         "Memoria"
       ],
       "answer": "Núcleo del sistema",
+      "explicacion": "En un llamado a una syscall, el núcleo del sistema se encarga de finalmente invocar a la system call ya que implica una instrucción privilegiada. Diapositiva 22, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "218"
     },
     {
       "type": "multipleChoice",
-      "question": "En un llamado a una syscall, ¿Quién se encarga del quinto passo, o sea, de poner el valor retornado por la syscall en algún registro específico?",
+      "question": "En un llamado a una syscall, ¿Quién se encarga del quinto paso, o sea, de poner el valor retornado por la syscall en algún registro específico?",
       "options": [
         "Proceso de usuario",
         "Hardware",
@@ -730,6 +780,7 @@
         "Memoria"
       ],
       "answer": "Núcleo del sistema",
+      "explicacion": "En un llamado a una syscall, el núcleo del sistema se encarga de poner el valor retornado por la syscall en algún registro específico. Diapositiva 22, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "219"
     },
     {
@@ -742,6 +793,7 @@
         "Memoria"
       ],
       "answer": "Núcleo del sistema",
+      "explicacion": "En un llamado a una syscall, el núcleo del sistema se encarga de volver el sistema a modo usuario y retornar el control al proceso que invocó la syscall, o eventualmente a otro, pues implica instrucciones privilegiadas y al hacer esto el sistema estaba en modo monitor. Diapositiva 22, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "220"
     },
     {
@@ -752,6 +804,7 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "Existen 3 formas de pasar los parámetros al sistema operativos: A través de los registros, un bloque de memoria apuntado a través de un registro, o en el stack del proceso que realiza el llamado. Diapositiva 23, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "221"
     },
     {
@@ -764,6 +817,7 @@
         "Gestión de información del sistema"
       ],
       "answer": "Control de procesos",
+      "explicacion": "Control de procesos: Cargar, ejecutar, finalizar, abortar, obtener atributos, cargar atributos, esperar por tiempo, esperar por un evento o señal, obtener o liberar memoria, etc. Diapositiva 25, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "222"
     },
     {
@@ -776,6 +830,7 @@
         "Gestión de archivos"
       ],
       "answer": "Gestión de archivos",
+      "explicacion": "Gestión de archivos: Crear, borrar, abrir, cerrar, leer, escribir, obtener o cargar atributos, etc. Diapositiva 25, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "223"
     },
     {
@@ -788,6 +843,7 @@
         "Comunicaciones"
       ],
       "answer": "Gestión de dispositivos",
+      "explicacion": "Gestión de dispositivos: Requerir o liberar un dispositivo, leer o escribir, buscar o cargar atributos de un dispositivo, etc. Diapositiva 25, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "224"
     },
     {
@@ -800,6 +856,7 @@
         "Comunicaciones"
       ],
       "answer": "Gestion de información del sistema",
+      "explicacion": "Gestión de información del sistema: Obtener o cargar la hora del sistema, datos del sistema, de procesos, etc. Diapositiva 25, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "225"
     },
     {
@@ -812,29 +869,33 @@
         "Control de procesos"
       ],
       "answer": "Comunicaciones",
+      "explicacion": "Comunicaciones: Crear o destruir conexiones, enviar o recibir mensajes, etc. Diapositiva 25, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "226"
     },
     {
       "type": "multipleChoice",
-      "question": "¿Cuál de los siguientes diseños de sistema no tiene una estructura definida",
+      "question": "¿Cuál de los siguientes diseños de sistema no tiene una estructura definida?",
       "options": [
         "Sistema monolítico",
         "Sistema en capas",
         "Sistema microkernel"
       ],
       "answer": "Sistema monolítico",
+      "explicacion": "Sistema monolítico: No se tiene una estructura definida. Diapositiva 28, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "227"
     },
     {
       "type": "fillInTheBlank",
       "question": "El sistema ______ no tiene ocultación de información, ya que cualquier procedimiento puede invocar a otro",
       "answer": "monolitico",
+      "explicacion": "Sistema monolítico: No existe ocultación de información, ya que cualquier procedimiento puede invocar a otro. Diapositiva 28, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "228"
     },
     {
       "type": "fillInTheBlank",
       "question": "En un diseño de sistema en capas, la capa 0 es el ____ y  la N es la de los procesos de usuario",
       "answer": "hardware",
+      "explicacion": "Sistema en capas: La capa 0 es el hardware y la N es la de los procesos de usuario. Diapositiva 29, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "229"
     },
     {
@@ -846,6 +907,7 @@
         "Sistema microkernel"
       ],
       "answer": "Sistema en capas",
+      "explicacion": "Sistema en capas: Se organiza el diseño en una jerarquía de capas construidas una encima de la otra. Diapositiva 29, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "230"
     },
     {
@@ -856,17 +918,19 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "El sistema en capas es menos eficiente frente al sistema monolítico ya que sufre de overhead al pasar por cada capa. Diapositiva 30, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "231"
     },
     {
-      "type": "trueOrFalse",
-      "question": "¿Cuál de los siguientes diseños de sistema se constituye de un núcleo con un manejo mínimo de procesos memoria, y además provea de una capa de comunicación entre procesos?",
+      "type": "multipleChoice",
+      "question": "¿Cuál de los siguientes diseños de sistema se constituye de un núcleo con un manejo mínimo de procesos, memoria, y además provea de una capa de comunicación entre procesos?",
       "options": [
         "Sistema monolítico",
         "Sistema en capas",
         "Sistema microkernel"
       ],
       "answer": "Sistema microkernel",
+      "explicacion": "Sistema microkernel: Se constituye de un núcleo con un manejo mínimo de procesos, memoria, y además provea de una capa de comunicación entre procesos. Diapositiva 32, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "232"
     },
     {
@@ -877,16 +941,18 @@
         "false"
       ],
       "answer": "true",
+      "explicacion": "Sistema microkernel: La capa de comunicación es la funcionalidad principal del sistema. Diapositiva 32, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "233"
     },
     {
       "type": "trueOrFalse",
-      "question": "Una de las desventajas de un sistema microkernel es su insgeguridad",
+      "question": "Una de las desventajas de un sistema microkernel es su inseguridad",
       "options": [
         "true",
         "false"
       ],
       "answer": "false",
+      "explicacion": "Sistema microkernel: Entre sus ventajas, está el hecho de que es más seguro debido a que los servicios corren en modo usuario. Diapositiva 33, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "234"
     },
     {
@@ -897,10 +963,11 @@
         "false"
       ],
       "answer": "false",
+      "explicacion": "Máquinas virtuales, dos modos básicos: Tipo 1 (el administrador corre directamente sobre el hardware) y Tipo 2 (el administrador corre como un proceso sobre un sistema operativo normal). Diapositiva 37, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "235"
     },
     {
-      "type": "trueOrFalse",
+      "type": "multipleChoice",
       "question": "¿Cuál de las siguientes NO es una desvenetaja de las máquinas virtuales?",
       "options": [
         "Extensos tiempos de respuesta",
@@ -908,10 +975,351 @@
         "Poca disponibilidad"
       ],
       "answer": "Poca disponibilidad",
+      "explicacion": "Beneficios de las máquinas virtuales: Seguridad, facilidad de desarrollo, flexibilidad y alta disponibilidad. Diapositiva 38, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "236"
     }
   ],
-  "Procesos": [],
+  "Procesos": [
+    {
+      "type": "fillInTheBlank",
+      "question": "¿Cómo se le dice a un programa en ejecución, incluyendo el valor del program counter, los registros y las variables?",
+      "answer": "proceso",
+      "explicacion": "Un proceso es un programa en ejecución, incluyendo el valor del program counter, los registros y las variables. Diapositiva 4, Procesos, Sistemas Operativos 2024.",
+      "id": "30"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Cada proceso tiene su propio process id y es lo que avanza cuando el proceso tiene asignado el recurso procesador.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Cada proceso tiene su propio programm counter y es lo que avanza cuando el proceso tiene asignado el recurso procesador. Diapositiva 5, Procesos, Sistemas Operativos 2024.",
+      "id": "31"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Cómo se le dice al número que se le asigna a cada proceso para identificarlo entre los demás?",
+      "options": [
+        "Process id",
+        "Program counter",
+        "Program id",
+        "Process counter"
+      ],
+      "answer": "Process id",
+      "explicacion": "A cada proceso se le asigna un número que lo identifica entre los demás: identificador de proceso (process id). Diapositiva 5, Procesos, Sistemas Operativos 2024.",
+      "id": "32"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considere las secciones de las memorias de un proceso, ¿Cómo se le dice a la sección que contiene las instrucciones del proceso?",
+      "options": [
+        "Text (código)",
+        "Data (datos)",
+        "Heap (memoria dinámica)",
+        "Stack (pila)"
+      ],
+      "answer": "Text (código)",
+      "explicacion": "Código (text): Instrucciones del proceso. Diapositiva 6, Procesos, Sistemas Operativos 2024.",
+      "id": "33"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considere las secciones de las memorias de un proceso, ¿Cómo se le dice a la sección que contiene las variables globales del proceso?",
+      "options": [
+        "Text (código)",
+        "Data (datos)",
+        "Heap (memoria dinámica)",
+        "Stack (pila)"
+      ],
+      "answer": "Data (datos)",
+      "explicacion": "Datos (data): Variables globales del proceso. Diapositiva 6, Procesos, Sistemas Operativos 2024.",
+      "id": "34"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considere las secciones de las memorias de un proceso, ¿Cómo se le dice a la sección que contiene la memoria dinámica que genera el proceso?",
+      "options": [
+        "Text (código)",
+        "Data (datos)",
+        "Heap (memoria dinámica)",
+        "Stack (pila)"
+      ],
+      "answer": "Heap (memoria dinámica)",
+      "explicacion": "Memoria dinámica (heap): Memoria dinámica que genera el proceso. Diapositiva 6, Procesos, Sistemas Operativos 2024.",
+      "id": "35"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considere las secciones de las memorias de un proceso, ¿Cómo se le dice a la sección que es utilizada para preservar el estado en la invocación anidada de procedimientos y funciones?",
+      "options": [
+        "Text (código)",
+        "Data (datos)",
+        "Heap (memoria dinámica)",
+        "Stack (pila)"
+      ],
+      "answer": "Stack (pila)",
+      "explicacion": "Pila (stack): Utilizado para preservar el estado en la invocación anidada de procedimientos y funciones. Diapositiva 6, Procesos, Sistemas Operativos 2024.",
+      "id": "36"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿En qué estado se encuentra un proceso cuando es creado?",
+      "options": [
+        "Nuevo",
+        "Ejecutando",
+        "Bloqueado",
+        "Finalizado"
+      ],
+      "answer": "Nuevo",
+      "explicacion": "Nuevo (new): Cuando el proceso es creado. Diapositiva 8, Procesos, Sistemas Operativos 2024.",
+      "id": "37"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿En qué estado se encuentra un proceso cuando tiene asignado un procesador y está ejecutando sus instrucciones?",
+      "options": [
+        "Nuevo",
+        "Ejecutando",
+        "Bloqueado",
+        "Listo"
+      ],
+      "answer": "Ejecutando",
+      "explicacion": "Ejecutando (running): El proceso tiene asignado un procesador y está ejecutando sus instrucciones. Diapositiva 8, Procesos, Sistemas Operativos 2024.",
+      "id": "38"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿En qué estado se encuentra un proceso cuando está esperando por un evento (que se bloquee un pedido de E/S o una señal?",
+      "options": [
+        "Nuevo",
+        "Finalizado",
+        "Bloqueado",
+        "Listo"
+      ],
+      "answer": "Bloqueado",
+      "explicacion": "Bloqueado (waiting): El proceso está esperando por un evento (que se complete un pedido de E/S o una señal). Diapositiva 8, Procesos, Sistemas Operativos 2024.",
+      "id": "39"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿En qué estado se encuentra un proceso cuando está listo para ejecutar, solo necesita del recurso procesador?",
+      "options": [
+        "Bloqueado",
+        "Listo",
+        "Finalizado",
+        "Ejecutando"
+      ],
+      "answer": "Listo",
+      "explicacion": "Listo (ready): El proceso está listo para ejecutar, solo necesita del recurso procesador. Diapositiva 8, Procesos, Sistemas Operativos 2024.",
+      "id": "310"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿En qué estado se encuentra un proceso cuando finalizó su ejecución?",
+      "options": [
+        "Nuevo",
+        "Finalizado",
+        "Bloqueado",
+        "Listo"
+      ],
+      "answer": "Finalizado",
+      "explicacion": "Finalizado (terminated): El proceso finalizó su ejecución.  Diapositiva 8, Procesos, Sistemas Operativos 2024.",
+      "id": "311"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Cuando un proceso se crea, pasa inmediatamente al estado listo",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Nuevo -> Listo: Al crearse un proceso pasa inmediatamente al estado listo. Diapositiva 10, Procesos, Sistemas Operativos 2024.",
+      "id": "312"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Cuando se libera un procesador, ¿Quién selecciona el próximo proceso a ejecutar?",
+      "options": [
+        "El planificador",
+        "El despachador",
+        "El proceso que estaba ejecutando",
+        "La ALU"
+      ],
+      "answer": "El planificador",
+      "explicacion": "Al liberarse un procesador el planificador (scheduler) selecciona el próximo proceso, según algún criterio definido, a ejecutar. Diapositiva 10, Procesos, Sistemas Operativos 2024.",
+      "id": "313"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Cómo se llama la estructura que representa a un proceso a nivel de sistema operativo?",
+      "options": [
+        "Bloque descriptor de proceso",
+        "Bloque de ejecución de proceso",
+        "Bloque de programa",
+        "Pila de proceso"
+      ],
+      "answer": "Bloque descriptor de proceso",
+      "explicacion": "El proceso es representado, a nivel de sistema operativo, a través del bloque descriptor de proceso. Diapositiva 14, Procesos, Sistemas Operativos 2024.",
+      "id": "314"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El campo 'Estado CPU' del PCB de un proceso siempre está definido.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Estado CPU: El contenido de esta estructura estará indefinido toda vez que el proceso está en estado ejecutando. Diapositiva 15, Procesos, Sistemas Operativos 2024.",
+      "id": "315"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El campo 'Procesador' de un proceso es indefinido si no está ejecutando",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": ". Diapositiva 15, Procesos, Sistemas Operativos 2024.",
+      "id": "316"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿En qué campo del PCB de un proceso se almacena la cantidad de fallos de páginas que tuvo?",
+      "options": [
+        "Memoria",
+        "Contabilización",
+        "Ancestro",
+        "Recursos"
+      ],
+      "answer": "Contabilización",
+      "explicacion": "Contabilización: Información contable como la cantidad de E/S, fallos de páginas (page faults), consumo de procesador, memoria utilizada, etc. Diapositiva 17, Procesos, Sistemas Operativos 2024.",
+      "id": "317"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Un proceso hijo comparte el campo de memoria 'text' con su padre.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Creación de procesos: En el momento de creación de un nuevo proceso, se debe decidir qué RECURSOS compartirán el proceso padre e hijo (como archivos abiertos). Nunca se comparte la memoria  ni el estado de la CPU. Diapositiva 18, Procesos, Sistemas Operativos 2024.",
+      "id": "318"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considere el fork en UNIX, si se invoca esta función, ¿A quién se le asigna un process id de valor 0?",
+      "options": [
+        "Proceso padre",
+        "Proceso hijo",
+        "Los dos",
+        "Ninguno"
+      ],
+      "answer": "Proceso hijo",
+      "explicacion": "La invocación del fork le retorna al padre el número de process id del hijo recién creado y al hijo el valor 0. Diapositiva 20, Procesos, Sistemas Operativos 2024.",
+      "id": "319"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "La system call exec reemplaza el espacio de memoria por uno nuevo",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Se provee del system call exec que reemplaza el espaccio de memoria del proceso por uno nuevo. Diapositiva 20, Procesos, Sistemas Operativos 2024.",
+      "id": "320"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "En la job queue se encuentra únicamente los procesos que están en estado listo",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "En la job queue se encuentran todos los procesos del sistema y son borrados al terminar su ejecución, en la ready queue se encuentran todos los procesos que están en estado listo. Diapositiva 24, Procesos, Sistemas Operativos 2024.",
+      "id": "321"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "A la tarea de cambiar un proceso por otro en el procesaador se le denomina cambio de _______",
+      "answer": "contexto",
+      "explicacion": "A la tarea de cambiar un proceso por otro en el procesador se le denomina cambio de contexto. Diapositiva 28, Procesos, Sistemas Operativos 2024.",
+      "id": "322"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Cuáles son los tres enfoques fundamentales de la cooperación entre procesos?",
+      "options": [
+        "Pipes, Memoria compartida, Pasaje de mensajes",
+        "Pipes, Memoria virtual, Pasaje de mensajes",
+        "Pasaje de mensaajes, Memoria compartida, Memoria virtual",
+        "Memoria compartida, Pipes, Virtualización"
+      ],
+      "answer": "Pipes, Memoria compartida, Pasaje de mensajes",
+      "explicacion": "Cooperación entre procesos: Hay tres enfoques fundamentales los cuales son Pipes, Memoria compartida y Pasaje de mensajes. Diapositiva 30, Procesos, Sistemas Operativos 2024.",
+      "id": "323"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Un ____ es la unidad básica de utilización de la CPU consistente en un juego de registros y un espaccio de pila.",
+      "answer": "hilo",
+      "explicacion": "Un hilo (thread) es una unidad básica de utilización de la CPU consistente en un juego de registros y un espaccio de pila. Diapositiva 33, Procesos, Sistemas Operativos 2024.",
+      "id": "324"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Los hilos del mismo proceso comparten:",
+      "options": [
+        "Código, datos y recursos",
+        "Código, datos y program counter",
+        "Program counter, stack y registros",
+        "Stack, código y datos"
+      ],
+      "answer": "Código, datos y recursos",
+      "explicacion": "Los hilos comparten el código, los datos y los recursos con sus hilos pares. Diapositiva 33, Procesos, Sistemas Operativos 2024.",
+      "id": "325"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El cambio de contexto entre procesos (comparado al cambio de contexto entre hilos de un mismo proceso) es más económico y sencillo ya que no comparten memoria",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Es más fácil un cambio de contexto entre hilos ya que no es necesario cambiar el espacio de direccionamiento. Diapositiva 35, Procesos, Sistemas Operativos 2024.",
+      "id": "326"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Los user  threads son implementados en alguna librería de usuario que debe proveerles soporte, mientras que los kernel threads tienen soporte del sistema operativo para su creación, planificación y administración.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Hilos a nivel de usuario son implementados en alguna librería de usuario que les da soporte, hilos a nivel de núcleo implican que el sistema es quien provee la creación, planificación y administración de los threads. Diapositiva 38, Procesos, Sistemas Operativos 2024.",
+      "id": "327"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "En el curso se estudian tres modelos de uso de user threads y kernel threads en el sistema operativo·",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "En el curso se estudian tres modelos de uso de user threads y kernel threads en el sistema operativo: Many-To-One (varios threads de a nivel de usuario a un único thread a nivel de sistema), One-To-One (cada thread de usuario se corresponde con un thread a nivel de núcleo) y Many-To-Many (varios threads a nivel de usuario se corresponden con varios threads a nivel de núcleo). Diapositiva 41, Procesos, Sistemas Operativos 2024.",
+      "id": "328"
+    }
+  ],
   "Planificación": [],
   "Introducción a la concurrencia": [],
   "Sección crítica": [],

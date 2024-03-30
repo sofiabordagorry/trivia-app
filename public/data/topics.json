@@ -10,11 +10,11 @@
     },
     {
       "name": "Estructura de los Sistemas Operativos",
-      "implemented": "no"
+      "implemented": "si"
     },
     {
       "name": "Procesos",
-      "implemented": "no"
+      "implemented": "si"
     },
     {
       "name": "Planificación",
