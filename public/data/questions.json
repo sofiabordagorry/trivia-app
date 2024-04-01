@@ -1320,7 +1320,33 @@
       "id": "328"
     }
   ],
-  "Planificación": [],
+  "Planificación": [
+    {
+      "type": "multipleChoice",
+      "question": "¿Qué componente del sistema operativo realiza la elección del siguiente proceso a ejecutar?",
+      "options": [
+        "Planificador",
+        "Despachador",
+        "La ALU",
+        "El proceso que estaba ejecutando"
+      ],
+      "answer": "Planificador",
+      "explicacion": "El componente del sistema operativo que realiza la elección del próximo proceso a ejecutar es llamado planificador (scheduler). Diapositiva 4, Planificación, Sistemas Operativos 2024.",
+      "id": "40"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En el curso se estudian tres modelos de uso de user threads y kernel threads en el sistema operativo·",
+      "options": [
+        "Largo plazo",
+        "Mediano plazo",
+        "Corto plazo"
+      ],
+      "answer": "true",
+      "explicacion": " . Diapositiva 5, Planificación, Sistemas Operativos 2024.",
+      "id": "41"
+    }
+  ],
   "Introducción a la concurrencia": [],
   "Sección crítica": [],
   "Semáforos y utilización de semáforos": [],
