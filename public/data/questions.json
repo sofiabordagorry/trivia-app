@@ -664,7 +664,7 @@
       "id": "29"
     },
     {
-      "type": "trueOrFalse",
+      "type": "multipleChoice",
       "question": "¿A qué servicio pertenece la siguiente tarea del Sistema Operativo: algoritmos de planificación de disco?",
       "options": [
         "Ejecución de programas y administración de procesos",
