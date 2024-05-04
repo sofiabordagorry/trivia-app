@@ -1336,15 +1336,301 @@
     },
     {
       "type": "multipleChoice",
-      "question": "En el curso se estudian tres modelos de uso de user threads y kernel threads en el sistema operativo·",
+      "question": "¿Qué planificador es el que controla el grado de multiprogramación del sistema?",
       "options": [
         "Largo plazo",
         "Mediano plazo",
         "Corto plazo"
       ],
-      "answer": "true",
-      "explicacion": " . Diapositiva 5, Planificación, Sistemas Operativos 2024.",
+      "answer": "Largo plazo",
+      "explicacion": " Diapositiva 4, Planificación, Sistemas Operativos 2024.",
       "id": "41"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "La planificación (scheduling) es la base para lograr la multiprogramación",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 3, Planificación, Sistemas Operativos 2024.",
+      "id": "42"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El componente del sistema operativo que realiza la elección del proceso es llamado: ___ ",
+      "answer": "planificador",
+      "explicacion": " Diapositiva 3, Planificación, Sistemas Operativos 2024.",
+      "id": "43"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Qué planificador determina qué prograamas son admitidos al sistema para ejecución?",
+      "options": [
+        "Largo plazo",
+        "Mediano plazo",
+        "Corto plazo"
+      ],
+      "answer": "Largo plazo",
+      "explicacion": " Diapositiva 4, Planificación, Sistemas Operativos 2024.",
+      "id": "44"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Qué planificador es el que controla el grado de multiprogramación del sistema?",
+      "options": [
+        "Largo plazo",
+        "Mediano plazo",
+        "Corto plazo"
+      ],
+      "answer": "Largo plazo",
+      "explicacion": "Diapositiva 4, Planificación, Sistemas Operativos 2024.",
+      "id": "45"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Qué planificador determina si agregar más programas a los que ya están parcial o totalmente en memoria principal?",
+      "options": [
+        "Largo plazo",
+        "Mediano plazo",
+        "Corto plazo"
+      ],
+      "answer": "Mediano plazo",
+      "explicacion": "Diapositiva 4, Planificación, Sistemas Operativos 2024.",
+      "id": "46"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "¿Qué planificador es el que determina qué proceso es ejecutado en el procesador?",
+      "options": [
+        "Largo plazo",
+        "Mediano plazo",
+        "Corto plazo"
+      ],
+      "answer": "Corto plazo",
+      "explicacion": "Diapositiva 4, Planificación, Sistemas Operativos 2024.",
+      "id": "47"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El módulo del SO que da control de la  CPU al proceso seleccionado por el planificador se llama ____",
+      "answer": "despachador",
+      "explicacion": "Diapositiva 5, Planificación, Sistemas Operativos 2024.",
+      "id": "48"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Decimos que un proceso es CPU-bound si tiene poco uso del CPU y hace más operaciones de E/S",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Procesos CPU-bound: Los procesos que contienen un alto uso de procesador son llamados CPU-bound o compute-bound. .Diapositiva 6, Planificación, Sistemas Operativos 2024.",
+      "id": "49"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Decimos que un proceso es I/O-bound si realiza muchos acceso a operaciones de E/S",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Procesos I/O-bound: Los procesos que realizan muchos accesos a operaciones de E/S son llamados I/O-bound..Diapositiva 6, Planificación, Sistemas Operativos 2024.",
+      "id": "49"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Si un planificador puede quitarle el procesador a un proceso A al crearse un nuevo proceso B, sin que A lo liberara voluntariamente, entonces es expropiativo",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 8, Planificación, Sistemas Operativos 2024.",
+      "id": "410"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Sistemas operativos con planificadores no expropiativos son los que asignan el recurso procesador a un proceso y hasta que este no lo libere, ya sea porque finaliza su ejecución o se bloquea, no se vuelve a ejecutar el planificador.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 8, Planificación, Sistemas Operativos 2024.",
+      "id": "411"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Un planificador _____ implica que puedo quitarle el recurso procesador a un proceso cuando otro proceso entra en estado listo o porque se le impone un límite de tiempo para ejecutar.",
+      "answer": "expropiativo",
+      "explicacion": "Diapositiva 8, Planificación, Sistemas Operativos 2024.",
+      "id": "412"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Como el sistema no interacúa con el usuario, los planificadores no expropiativos son ideales en sistemas por lotes.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 10, Planificación, Sistemas Operativos 2024.",
+      "id": "413"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "La ______ de CPU es el porcentaje de uso (en cuanto a ejecución de tareas de usuario o del sistema que son consideradas útiles) que tiene un procesador.",
+      "answer": "utilizacion",
+      "explicacion": "Diapositiva 11, Planificación, Sistemas Operativos 2024.",
+      "id": "414"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El ______ es el número de procesos que ejecutaron completamente por unidad de tiempo (una hora p.ej.).",
+      "answer": "rendimiento",
+      "explicacion": "Diapositiva 11, Planificación, Sistemas Operativos 2024.",
+      "id": "415"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El tiempo de ______ es el intervalo de tiempo desde que un proceso es cargado hasta que este finaliza su ejecución.",
+      "answer": "retorno",
+      "explicacion": "Diapositiva 11, Planificación, Sistemas Operativos 2024.",
+      "id": "416"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El tiempo de ______ es la suma de los intervalos de tiempo que un proceso estuvo en la cola de procesos listos (ready queue).",
+      "answer": "espera",
+      "explicacion": "Diapositiva 12, Planificación, Sistemas Operativos 2024.",
+      "id": "417"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "El tiempo de ______ es  el intervalo de tiempo desde que un proceso es cargado hasta que brinda su primer respuesta. Es útil en sistemas interactivos",
+      "answer": "respuesta",
+      "explicacion": "Diapositiva 12, Planificación, Sistemas Operativos 2024.",
+      "id": "418"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En este algoritmo de planificaciín, los procesos son ejecutados en el orden en el que llegan a la cola de procesos listos.",
+      "options": [
+        "First Come First Served",
+        "Shortest Job First",
+        "Basado en prioridad",
+        "Round Robin"
+      ],
+      "answer": "First Come First Served",
+      "explicacion": "Diapositiva 13, Planificación, Sistemas Operativos 2024.",
+      "id": "419"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En este algoritmo de planificaciín, se asocia a los procesos el largo de su próximo CPU burst",
+      "options": [
+        "First Come First Served",
+        "Shortest Job First",
+        "Basado en prioridad",
+        "Round Robin"
+      ],
+      "answer": "Shortest Job First",
+      "explicacion": "Diapositiva 15, Planificación, Sistemas Operativos 2024.",
+      "id": "420"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En este algoritmo de planificaciín, cuando el procesador queda libre entonces se lo asigna al proceso con menor CPU-burst.",
+      "options": [
+        "First Come First Served",
+        "Shortest Job First",
+        "Basado en prioridad",
+        "Round Robin"
+      ],
+      "answer": "Shortest Job First",
+      "explicacion": "Diapositiva 15, Planificación, Sistemas Operativos 2024.",
+      "id": "421"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En este algoritmo de planificaciín, a cada proceso se le asigna un entero que representa su prioridad",
+      "options": [
+        "First Come First Served",
+        "Shortest Job First",
+        "Basado en prioridad",
+        "Round Robin"
+      ],
+      "answer": "Basado en prioridad",
+      "explicacion": "Diapositiva 20, Planificación, Sistemas Operativos 2024.",
+      "id": "422"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El algoritmo de planificación basado en prioridad sufre de inanición",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 20, Planificación, Sistemas Operativos 2024.",
+      "id": "423"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "En este algoritmo de planificaciín, a cada proceso se le brinda un intervalo de tiempo para usar el procesador",
+      "options": [
+        "First Come First Served",
+        "Shortest Job First",
+        "Basado en prioridad",
+        "Round Robin"
+      ],
+      "answer": "Round Robin",
+      "explicacion": "Diapositiva 21, Planificación, Sistemas Operativos 2024.",
+      "id": "424"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El algoritmo de planificación Shortest Job First es extrictamente expropiativo",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 16, Planificación, Sistemas Operativos 2024.",
+      "id": "425"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Si el tiempo de quantum en Round Robin es muy grande el sistema tiende a un FCFS",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 23, Planificación, Sistemas Operativos 2024.",
+      "id": "426"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "En las multilevel queue todas las colas deben tener el mismo algoritmo de planificación",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 26, Planificación, Sistemas Operativos 2024.",
+      "id": "427"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "La multilevel ____ queue se diferencia con la multilevel queue porque los procesos pueden cambiar de cola",
+      "answer": "feedback",
+      "explicacion": "Diapositiva 28, Planificación, Sistemas Operativos 2024.",
+      "id": "428"
     }
   ],
   "Introducción a la concurrencia": [],
