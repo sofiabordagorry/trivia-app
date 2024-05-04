@@ -1259,7 +1259,7 @@
       "options": [
         "Pipes, Memoria compartida, Pasaje de mensajes",
         "Pipes, Memoria virtual, Pasaje de mensajes",
-        "Pasaje de mensaajes, Memoria compartida, Memoria virtual",
+        "Pasaje de mensajes, Threads, Memoria virtual",
         "Memoria compartida, Pipes, Virtualización"
       ],
       "answer": "Pipes, Memoria compartida, Pasaje de mensajes",
