@@ -22,11 +22,11 @@
     },
     {
       "name": "Introducción a la concurrencia",
-      "implemented": "no"
+      "implemented": "si"
     },
     {
       "name": "Sección crítica",
-      "implemented": "no"
+      "implemented": "si"
     },
     {
       "name": "Semáforos y utilización de semáforos",

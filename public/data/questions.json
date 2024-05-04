@@ -1633,8 +1633,225 @@
       "id": "428"
     }
   ],
-  "Introducción a la concurrencia": [],
-  "Sección crítica": [],
+  "Introducción a la concurrencia": [
+    {
+      "type": "fillInTheBlank",
+      "question": "Los procesos ____ son aquellos que pueden afectar el estado de otros procesos o cuyo estado es afectado por otros procesos",
+      "answer": "cooperativos",
+      "explicacion": "Diapositiva 1, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "50"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El acceso concurrente a los mismos datos puede generar inconsistencias si no se tiene cuidado, esto se puede solucionar con una correcta planificación, usando un buen Round Robin por ejemplo",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "51"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Un grafo de _____ es un grafo acíciclo y dirigido cuyos nodos son tareas y cuyas aristas indican la precedencia. Permite especificar el orden en el que se deben ejecutar los procesos",
+      "answer": "precedencia",
+      "explicacion": "Diapositiva 5, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "52"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Considerando los grafos de precedencia, solo aquellos que formen subgrafos disjuntos concurrentes pueden ser representados con cobegin-coend",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 11, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "53"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "La herramienta para declarar procesos concurrentes cobegin-coend, permite representar todos los grafos de precedencia",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 7, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "54"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Considerando los grafos de precedencia, solo aquellos que formen subgrafos disjuntos concurrentes pueden ser representados con cobegin-coend",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 11, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "55"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considerando la estrategia de fork-join, la instrucción que divide el proceso en dos tal que uno de ellos continúa ejecutando luego del fork y el otro salta a la etiqueta es:",
+      "options": [
+        "Fork <etiqueta>",
+        "Join <contador> <etiqueta>",
+        "Goto <etiqueta>",
+        "Quit"
+      ],
+      "answer": "Fork <etiqueta>",
+      "explicacion": "Diapositiva 13, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "56"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considerando la estrategia de fork-join, la instrucción que cada vez que un proceso ejecuta Join, el contador (que es una variable global) se decrementa uno y si el contador queda en 0 el proceso salta a la etiqueta, en otro caso termina, es:",
+      "options": [
+        "Fork <etiqueta>",
+        "Join <contador> <etiqueta>",
+        "Goto <etiqueta>",
+        "Quit"
+      ],
+      "answer": "Join <contador> <etiqueta>",
+      "explicacion": "Diapositiva 13, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "57"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considerando la estrategia de fork-join, la instrucción que hace que un proceso solo salte a una etiqueta es:",
+      "options": [
+        "Fork <etiqueta>",
+        "Join <contador> <etiqueta>",
+        "Goto <etiqueta>",
+        "Quit"
+      ],
+      "answer": "Goto <etiqueta>",
+      "explicacion": "Diapositiva 13, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "58"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Considerando la estrategia de fork-join, la instrucción que hace que un proceso termine es:",
+      "options": [
+        "Fork <etiqueta>",
+        "Join <contador> <etiqueta>",
+        "Goto <etiqueta>",
+        "Quit"
+      ],
+      "answer": "Quit",
+      "explicacion": "Diapositiva 13, Introducción a la Concurrencia, Sistemas Operativos 2024.",
+      "id": "59"
+    }
+  ],
+  "Sección crítica": [
+    {
+      "type": "trueOrFalse",
+      "question": "Para garantizar que los procesos cooperan correctamente, cuando un proceso está ejecutando su sección crítica ningún otro proceso puede estar ejecutando código de su sección crítica.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 3, Sección crítica, Sistemas Operativos 2024.",
+      "id": "60"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "La sección crítica tiene el mismo código para  todos los procesos.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Sección crítica, Sistemas Operativos 2024.",
+      "id": "61"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Solo un proceso ejecuta la región crítica en un momento dado. ¿A que requerimiento de una solución al problema de sección crítica se refiere?",
+      "options": [
+        "Mutua exclusión",
+        "Progreso",
+        "Espera acotada"
+      ],
+      "answer": "Mutua exclusión",
+      "explicacion": "Diapositiva 5, Sección crítica, Sistemas Operativos 2024.",
+      "id": "62"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Si uno o más procesos quieren acceder a la sección crítica y esta se libera la misma debe ser asignada a alguno de los procesos que están esperando y esta decisión no se debe dilatar indefinidamente (deadlock). ¿A que requerimiento de una solución al problema de sección crítica se refiere?",
+      "options": [
+        "Mutua exclusión",
+        "Progreso",
+        "Espera acotada"
+      ],
+      "answer": "Progreso",
+      "explicacion": "Diapositiva 5, Sección crítica, Sistemas Operativos 2024.",
+      "id": "63"
+    },
+    {
+      "type": "multipleChoice",
+      "question": "Debe haber una cota máxima para la cantidad de procesos que acceden a la región crítica una vez que un proceso lo ha solicitado y antes de que se lo deje entrar (evitar posposición indefinida). ¿A que requerimiento de una solución al problema de sección crítica se refiere?",
+      "options": [
+        "Mutua exclusión",
+        "Progreso",
+        "Espera acotada"
+      ],
+      "answer": "Espera acotada",
+      "explicacion": "Diapositiva 6, Sección crítica, Sistemas Operativos 2024.",
+      "id": "64"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El algoritmo de Dekker no usa busy waiting pues usa systme calls",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 7, Sección crítica, Sistemas Operativos 2024.",
+      "id": "65"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "El método gráfico del entrelazado permite graficar algunas, pero no todas, de las combinaciones posibles de la ejecución de las instrucciones de un código. Esto ayuda a ver si alguna combinación accede a la región crítica.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 10, Sección crítica, Sistemas Operativos 2024.",
+      "id": "66"
+    },
+    {
+      "type": "trueOrFalse",
+      "question": "Si se encuentra un camino en el entrelazado que entre a la región crítica, el algoritmo está mal.",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 10, Sección crítica, Sistemas Operativos 2024.",
+      "id": "67"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Las soluciones  eficientes al problema de la región crítica requieren asistencia de ____ y por lo tanto también del sistema operativo",
+      "answer": "hardware",
+      "explicacion": "Diapositiva 18, Sección crítica, Sistemas Operativos 2024.",
+      "id": "68"
+    },
+    {
+      "type": "fillInTheBlank",
+      "question": "Con respecto a la sincronización por hardware, la abstracción fundamental es el ____ que protege las regiones críticas",
+      "answer": "lock",
+      "explicacion": "Diapositiva 18, Sección crítica, Sistemas Operativos 2024.",
+      "id": "69"
+    }
+  ],
   "Semáforos y utilización de semáforos": [],
   "Monitores": [],
   "ADA": [],

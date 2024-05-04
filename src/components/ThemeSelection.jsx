@@ -17,7 +17,7 @@ function ThemeSelection() {
             .then(data => setThemes(data.topics)); // Aquí leemos los temas desde data.topics
     }, []);
 
-    
+
     useEffect(() => {
         // Simula la carga de datos
         setTimeout(() => {
@@ -52,52 +52,47 @@ function ThemeSelection() {
             <h1>Selecciona un tema</h1>
             <div className='options-container'>
                 <div className="topics-container">
-            {themes.map((theme, index) => (
-                <div className="topics" key={index}>
-                <Link to={theme.implemented === 'no' ? '/error-not-implemented' : '#'}>
-                    <button onClick={() => handleThemeClick(theme)}>
-                        {theme.name} 
-                    </button>
-                </Link>             
+                    {themes.map((theme, index) => (
+                        <div className="topics" key={index}>
+                            <Link to={theme.implemented === 'no' ? '/error-not-implemented' : '#'}>
+                                <button onClick={() => handleThemeClick(theme)}>
+                                    {theme.name}
+                                </button>
+                            </Link>
+                        </div>
+                    ))}
+                    {selectedTheme &&
+                        <Modal
+                            isOpen={questionsModalIsOpen}
+                            onRequestClose={closeQuestionsModal}
+                            contentLabel="Seleccionar cantidad de preguntas"
+                        >
+                            <div className="modal-content">
+                                <h2 className="report-error">Seleccionar cantidad de preguntas</h2>
+                                <p>Por favor, selecciona la cantidad de preguntas que deseas responder:</p>
+                                <div>
+                                    <Link to={`/trivia/${selectedTheme.name}/10`}>
+                                        <button>Responder 10 preguntas</button>
+                                    </Link>
+                                </div>
+                                <div>
+                                    <Link to={`/trivia/${selectedTheme.name}/all`}>
+                                        <button>Responder todas las preguntas</button>
+                                    </Link>
+                                </div>
+                                <div>
+                                    <button onClick={closeQuestionsModal}>Cerrar</button>
+                                </div>
+                            </div>
+                        </Modal>}
                 </div>
-                ))}                 
-                {selectedTheme && 
-                <Modal
-                    isOpen={questionsModalIsOpen}
-                    onRequestClose={closeQuestionsModal}
-                    contentLabel="Seleccionar cantidad de preguntas"
-                >
-                    <div className="modal-content">
-                        <h2 className="report-error">Seleccionar cantidad de preguntas</h2>
-                        <p>Por favor, selecciona la cantidad de preguntas que deseas responder:</p>
-                        <div>
-                        <Link to={`/trivia/${selectedTheme.name}/10`}>
-                        <button>Responder 10 preguntas</button>
+                <div style={{ textAlign: 'center', justifyContent: 'center', marginTop: '0px' }}>
+                    <div>
+                        <Link to="/">
+                            <button className="botonInicio">Volver al inicio</button>
                         </Link>
-                        </div>
-                        <div>
-                        <Link to={`/trivia/${selectedTheme.name}/15`}>
-                        <button>Responder 15 preguntas</button>
-                        </Link>
-                        </div>
-                        <div>
-                        <Link to={`/trivia/${selectedTheme.name}/all`}>
-                        <button>Responder todas las preguntas</button>
-                        </Link>
-                        </div>
-                        <div>
-                        <button onClick={closeQuestionsModal}>Cerrar</button>
-                        </div>
                     </div>
-                </Modal>}
                 </div>
-                <div style={{textAlign: 'center', justifyContent: 'center', marginTop: '0px'}}>
-                <div>
-                    <Link to="/">
-                        <button className="botonInicio">Volver al inicio</button>
-                    </Link>
-                </div>
-            </div>
                 <div className="options-right">
                     <div className='content'>
                         <img src="/images/PerritoPensando.png" alt="perrito" className="images-preguntas" />
