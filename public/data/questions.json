@@ -544,7 +544,7 @@
   ],
   "Estructura de los Sistemas Operativos": [
     {
-      "type": "trueOrFalse",
+      "type": "multipleChoice",
       "question": "El sistema operativo se divide en ___ componentes",
       "options": [
         "4",
