@@ -10,7 +10,7 @@
         "el usuario y el hardware"
       ],
       "answer": "el usuario, los programas y el hardware",
-      "explicacion": "El sistema operativo un programa que funciona como intermediario entre el usuario, los programas y el hardware. Diapositiva 4, Introducción, Sistemas Operativos 2024.",
+      "explicacion": "El sistema operativo es un programa que funciona como intermediario entre el usuario, los programas y el hardware. Diapositiva 4, Introducción, Sistemas Operativos 2024.",
       "id": "00"
     },
     {
@@ -422,7 +422,7 @@
     },
     {
       "type": "fillInTheBlank",
-      "question": "El polling se da cuando El procesador le comunica un pedido a la controladora del dispositivo y queda en un ____ waiting consultando a la controladora si está listo el pedido",
+      "question": "El polling se da cuando el procesador le comunica un pedido a la controladora del dispositivo y queda en un ____ waiting consultando a la controladora si está listo el pedido",
       "answer": "busy",
       "id": "118"
     },
@@ -558,13 +558,13 @@
     },
     {
       "type": "trueOrFalse",
-      "question": "El sistema operativo debe brindar 5 tipos de servicios bássicos",
+      "question": "El sistema operativo debe brindar 5 tipos de servicios báicos",
       "options": [
         "true",
         "false"
       ],
       "answer": "true",
-      "explicacion": "Servicios básicoss que debe brindar un sistema operativo: Ejecución de programas y administración de procesos, Operaciones de Entrada/Salida, Manipulación de sistemas de archivos, Comunicación entre procesos, Detección y manipulación de errores. Diapositiva 5, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
+      "explicacion": "Servicios básicos que debe brindar un sistema operativo: Ejecución de programas y administración de procesos, Operaciones de Entrada/Salida, Manipulación de sistemas de archivos, Comunicación entre procesos, Detección y manipulación de errores. Diapositiva 5, Estructura de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "21"
     },
     {
@@ -1299,7 +1299,7 @@
     },
     {
       "type": "trueOrFalse",
-      "question": "Los user  threads son implementados en alguna librería de usuario que debe proveerles soporte, mientras que los kernel threads tienen soporte del sistema operativo para su creación, planificación y administración.",
+      "question": "Los user threads son implementados en alguna librería de usuario que debe proveerles soporte, mientras que los kernel threads tienen soporte del sistema operativo para su creación, planificación y administración.",
       "options": [
         "true",
         "false"
