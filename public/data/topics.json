@@ -30,7 +30,7 @@
     },
     {
       "name": "Semáforos y utilización de semáforos",
-      "implemented": "no"
+      "implemented": "si"
     },
     {
       "name": "Monitores",

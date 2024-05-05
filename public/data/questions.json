@@ -855,7 +855,7 @@
         "Control de procesos",
         "Comunicaciones"
       ],
-      "answer": "Gestion de información del sistema",
+      "answer": "Gestión de información del sistema",
       "explicacion": "Gestión de información del sistema: Obtener o cargar la hora del sistema, datos del sistema, de procesos, etc. Diapositiva 25, Estrucutra de los Sistemas Operativos, Sistemas Operativos 2024.",
       "id": "225"
     },
@@ -1852,11 +1852,591 @@
       "id": "69"
     }
   ],
-  "Semáforos y utilización de semáforos": [],
-  "Monitores": [],
-  "ADA": [],
-  "Mailboxes (cola de mensajes)": [],
-  "Deadlock": [],
+  "Semáforos y utilización de semáforos": [
+      {
+      "type": "trueOrFalse",
+      "question": "Los semáforos son una herramienta para sincronizar procesos",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, Semáforos, Sistemas Operativos 2024.",
+      "id": "70"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos se pueden implementar con soporte del SO sin usar busy waiting",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, Semáforos, Sistemas Operativos 2024.",
+      "id": "71"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Un semáforo es un tipo de datos ____ que se manipula mediante tres funciones",
+      "answer": "integer",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "72"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Una vez inicializado un semáforo, puedo volver a inicializarlo si uso INIT",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "73"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "En semáforos, la función P disminuye en uno el valor del semáforo y la función V lo aumenta en uno",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "74"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "¿Cómo es el orden para despertar a los procesos que están esperando?",
+      "options": [
+        "No hay orden",
+        "Depende de la prioridad",
+        "Es como una cola FIFO"
+      ],
+      "answer": "No hay orden",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "75"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "Los semáforos también son llamados:",
+      "options": [
+        "spinlock",
+        "spintrap",
+        "detenedores de tráfico"
+      ],
+      "answer": "spinlock",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "76"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Las dos utilidades principales  de los semáforos son la secuencialización/señalización de procesos y la mutuoexclusión de secciones críticas",
+      "options": [
+        "true",
+        "false"      
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 11, Semáforos, Sistemas Operativos 2024.",
+      "id": "77"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Si estoy ejecutando P o V, podrían interrumpirme mientras lo hago y quitarme la CPU en medio de la ejecución de dichas funciones",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "78"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos de conteo solo pueden valer 0 o 1",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "79"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Los semáforos son una herramienta de ___ nivel",
+      "answer": "bajo",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "710"
+    }
+  ],
+  "Monitores": [      {
+      "type": "trueOrFalse",
+      "question": "Los monitores encapsulan los datos en forma privada y se acceden mediante métodos públicos",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 3, Monitores, Sistemas Operativos 2024.",
+      "id": "80"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "¿Cuál de los siguientes NO es un componente de los monitores?",
+      "options": [
+        "Conjunto de procedimientos públicos",
+        "Conjunto de variables privadas del monitor",
+        "Cuerpo de programa",
+        "Conjunto de variables públicas del monitor"
+      ],
+      "answer": "Conjunto de variables públicas del monitor",
+      "explicacion": "Diapositiva 4, Monitores, Sistemas Operativos 2024.",
+      "id": "81"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "¿Cuántos procesos pueden estar activos a la vez en los procedimientos del monitor?",
+      "options": [
+        "1",
+        "2",
+        "Infinitos",
+        "Ninguno"
+      ],
+      "answer": "1",
+      "explicacion": "Diapositiva 6, Monitores, Sistemas Operativos 2024.",
+      "id": "82"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los procesos que esperan por el acceso al monitor lo hacen en una cola FIFO",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 6, Monitores, Sistemas Operativos 2024.",
+      "id": "83"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "¿Cuál es el alcance de las variables de tipo condition?",
+      "options": [
+        "Solo son válidas dentro del monitor",
+        "Pueden ser alcanzadas desde cualquier parte del programa principal"
+        "Depende del programa y su lenguaje de programación"
+      ],
+      "answer": "Solo son válidas dentro del monitor",
+      "explicacion": "Diapositiva 9, Monitores, Sistemas Operativos 2024.",
+      "id": "84"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Mientras un proceso espera en la cola por una condición a cumplir, se considera que está ocupando el monitor",
+      "options": [
+        "true",
+        "false",
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 10, Monitores, Sistemas Operativos 2024.",
+      "id": "85"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "Los semáforos también son llamados:",
+      "options": [
+        "spinlock",
+        "spintrap",
+        "detenedores de tráfico"
+      ],
+      "answer": "spinlock",
+      "explicacion": "Diapositiva 5, Monitores, Sistemas Operativos 2024.",
+      "id": "86"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Las dos utilidades principales  de los semáforos son la secuencialización/señalización de procesos y la mutuoexclusión de secciones críticas",
+      "options": [
+        "true",
+        "false"      
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 11, Monitores, Sistemas Operativos 2024.",
+      "id": "87"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Si estoy ejecutando P o V, podrían interrumpirme mientras lo hago y quitarme la CPU en medio de la ejecución de dichas funciones",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Monitores, Sistemas Operativos 2024.",
+      "id": "88"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos de conteo solo pueden valer 0 o 1",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Monitores, Sistemas Operativos 2024.",
+      "id": "89"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Los semáforos son una herramienta de ___ nivel",
+      "answer": "bajo",
+      "explicacion": "Diapositiva 3, Monitores, Sistemas Operativos 2024.",
+      "id": "810"
+    }],
+  "ADA": [      {
+      "type": "trueOrFalse",
+      "question": "Los semáforos son una herramienta para sincronizar procesos",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, ADA, Sistemas Operativos 2024.",
+      "id": "90"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos se pueden implementar con soporte del SO sin usar busy waiting",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, ADA, Sistemas Operativos 2024.",
+      "id": "91"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Un semáforo es un tipo de datos ____ que se manipula mediante tres funciones",
+      "answer": "integer",
+      "explicacion": "Diapositiva 3, ADA, Sistemas Operativos 2024.",
+      "id": "92"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Una vez inicializado un semáforo, puedo volver a inicializarlo si uso INIT",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, ADA, Sistemas Operativos 2024.",
+      "id": "93"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "En semáforos, la función P disminuye en uno el valor del semáforo y la función V lo aumenta en uno",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "74"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "¿Cómo es el orden para despertar a los procesos que están esperando?",
+      "options": [
+        "No hay orden",
+        "Depende de la prioridad",
+        "Es como una cola FIFO"
+      ],
+      "answer": "No hay orden",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "75"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "Los semáforos también son llamados:",
+      "options": [
+        "spinlock",
+        "spintrap",
+        "detenedores de tráfico"
+      ],
+      "answer": "spinlock",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "76"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Las dos utilidades principales  de los semáforos son la secuencialización/señalización de procesos y la mutuoexclusión de secciones críticas",
+      "options": [
+        "true",
+        "false"      
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 11, Semáforos, Sistemas Operativos 2024.",
+      "id": "77"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Si estoy ejecutando P o V, podrían interrumpirme mientras lo hago y quitarme la CPU en medio de la ejecución de dichas funciones",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "78"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos de conteo solo pueden valer 0 o 1",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "79"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Los semáforos son una herramienta de ___ nivel",
+      "answer": "bajo",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "710"
+    }],
+  "Mailboxes (cola de mensajes)": [      {
+      "type": "trueOrFalse",
+      "question": "Los semáforos son una herramienta para sincronizar procesos",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, Semáforos, Sistemas Operativos 2024.",
+      "id": "70"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos se pueden implementar con soporte del SO sin usar busy waiting",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, Semáforos, Sistemas Operativos 2024.",
+      "id": "71"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Un semáforo es un tipo de datos ____ que se manipula mediante tres funciones",
+      "answer": "integer",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "72"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Una vez inicializado un semáforo, puedo volver a inicializarlo si uso INIT",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "73"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "En semáforos, la función P disminuye en uno el valor del semáforo y la función V lo aumenta en uno",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "74"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "¿Cómo es el orden para despertar a los procesos que están esperando?",
+      "options": [
+        "No hay orden",
+        "Depende de la prioridad",
+        "Es como una cola FIFO"
+      ],
+      "answer": "No hay orden",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "75"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "Los semáforos también son llamados:",
+      "options": [
+        "spinlock",
+        "spintrap",
+        "detenedores de tráfico"
+      ],
+      "answer": "spinlock",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "76"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Las dos utilidades principales  de los semáforos son la secuencialización/señalización de procesos y la mutuoexclusión de secciones críticas",
+      "options": [
+        "true",
+        "false"      
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 11, Semáforos, Sistemas Operativos 2024.",
+      "id": "77"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Si estoy ejecutando P o V, podrían interrumpirme mientras lo hago y quitarme la CPU en medio de la ejecución de dichas funciones",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "78"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos de conteo solo pueden valer 0 o 1",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "79"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Los semáforos son una herramienta de ___ nivel",
+      "answer": "bajo",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "710"
+    }],
+  "Deadlock": [      {
+      "type": "trueOrFalse",
+      "question": "Los semáforos son una herramienta para sincronizar procesos",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, Semáforos, Sistemas Operativos 2024.",
+      "id": "70"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos se pueden implementar con soporte del SO sin usar busy waiting",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 2, Semáforos, Sistemas Operativos 2024.",
+      "id": "71"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Un semáforo es un tipo de datos ____ que se manipula mediante tres funciones",
+      "answer": "integer",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "72"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Una vez inicializado un semáforo, puedo volver a inicializarlo si uso INIT",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "73"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "En semáforos, la función P disminuye en uno el valor del semáforo y la función V lo aumenta en uno",
+      "options": [
+        "true",
+        "false"
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "74"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "¿Cómo es el orden para despertar a los procesos que están esperando?",
+      "options": [
+        "No hay orden",
+        "Depende de la prioridad",
+        "Es como una cola FIFO"
+      ],
+      "answer": "No hay orden",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "75"
+    },
+        {
+      "type": "multipleChoice",
+      "question": "Los semáforos también son llamados:",
+      "options": [
+        "spinlock",
+        "spintrap",
+        "detenedores de tráfico"
+      ],
+      "answer": "spinlock",
+      "explicacion": "Diapositiva 5, Semáforos, Sistemas Operativos 2024.",
+      "id": "76"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Las dos utilidades principales  de los semáforos son la secuencialización/señalización de procesos y la mutuoexclusión de secciones críticas",
+      "options": [
+        "true",
+        "false"      
+      ],
+      "answer": "true",
+      "explicacion": "Diapositiva 11, Semáforos, Sistemas Operativos 2024.",
+      "id": "77"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Si estoy ejecutando P o V, podrían interrumpirme mientras lo hago y quitarme la CPU en medio de la ejecución de dichas funciones",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "78"
+    },
+        {
+      "type": "trueOrFalse",
+      "question": "Los semáforos de conteo solo pueden valer 0 o 1",
+      "options": [
+        "true",
+        "false"
+        ],
+      "answer": "false",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "79"
+    },
+        {
+      "type": "fillInTheBlank",
+      "question": "Los semáforos son una herramienta de ___ nivel",
+      "answer": "bajo",
+      "explicacion": "Diapositiva 3, Semáforos, Sistemas Operativos 2024.",
+      "id": "710"
+    }],
   "Administración de memoria I": [],
   "Administración de memoria II": [],
   "Memoria virtual": [],
