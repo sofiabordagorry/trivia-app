@@ -968,7 +968,7 @@
     },
     {
       "type": "multipleChoice",
-      "question": "¿Cuál de las siguientes NO es una desvenetaja de las máquinas virtuales?",
+      "question": "¿Cuál de las siguientes NO es una desventaja de las máquinas virtuales?",
       "options": [
         "Extensos tiempos de respuesta",
         "Tiempos de respuesta pocos predecibles",
