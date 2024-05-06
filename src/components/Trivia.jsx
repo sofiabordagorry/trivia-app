@@ -40,7 +40,7 @@ function Trivia() {
         if (allQuestions.length > 0) {
             let selected;
             if (count === 'all') {
-                selected = allQuestions;
+                selected =  shuffle(allQuestions);
             } else {
                 selected = shuffle(allQuestions).slice(0, parseInt(count));
             }
@@ -217,7 +217,7 @@ function Trivia() {
                 ) : (                    <div className="results-container">
                         <h2>¡Has terminado la trivia!</h2>
                         <div>
-                        <p className="final-score">Tu puntuación final es: {score}</p>
+                        <p className="final-score">Tu puntuación final es: {score}/{questions.length}</p>
                         <button onClick={() => setCurrentQuestion(0)} style={{ verticalAlign: 'middle' }}>Volver a jugar</button>
                         <Link to="/"><button style={{ verticalAlign: 'middle' }}>Volver al inicio</button></Link>
                         <button style={{ verticalAlign: 'middle' }} onClick={openCompareModal}>Comparar mis respuestas</button>
