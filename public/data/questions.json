@@ -2022,7 +2022,7 @@
       "question": "¿Cuál es el alcance de las variables de tipo condition?",
       "options": [
         "Solo son válidas dentro del monitor",
-        "Pueden ser alcanzadas desde cualquier parte del programa principal"
+        "Pueden ser alcanzadas desde cualquier parte del programa principal",
         "Depende del programa y su lenguaje de programación"
       ],
       "answer": "Solo son válidas dentro del monitor",
@@ -2034,7 +2034,7 @@
       "question": "Mientras un proceso espera en la cola por una condición a cumplir, se considera que está ocupando el monitor",
       "options": [
         "true",
-        "false",
+        "false"
       ],
       "answer": "false",
       "explicacion": "Diapositiva 10, Monitores, Sistemas Operativos 2024.",
