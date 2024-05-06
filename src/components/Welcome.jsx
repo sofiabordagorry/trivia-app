@@ -70,13 +70,18 @@ function Welcome() {
                             </Link>
                             </div>
                             <div>
-                            <Link to={`/trivia/random/50}`}>
+                            <Link to={`/trivia/random/50`}>
                             <button>Responder 50 preguntas</button>
                             </Link>
                             </div>
                             <div>
-                            <Link to={`/trivia/random/100}`}>
+                            <Link to={`/trivia/random/100`}>
                             <button>Responder 100 preguntas</button>
+                            </Link>
+                            </div>
+                            <div>
+                            <Link to={`/trivia/random/all`}>
+                            <button>Responder TODAS las preguntas</button>
                             </Link>
                             </div>
                             <div>
